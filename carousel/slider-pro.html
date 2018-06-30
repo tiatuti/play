@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <title>Simple Image Gallery</title>
+	 <meta charset="UTF-8">
+
+
+	<link rel="stylesheet" href="./dist/css/slider-pro.min.css">
+
+	<style type="text/css">
+
+		
+        * {
+
+			outline: 1px dotted red;
+			font-family: 'Open Sans', Arial;
+		}
+
+		.slider-pro {
+    		font-family: 'Open Sans', Arial;
+		}
+
+		/* Example 3 */
+
+		#example3 .sp-selected-thumbnail {
+			border: 2px solid #000;
+		}
+
+		#example3 .sp-slides-container {
+			display: none
+		}
+
+		#example3 .sp-thumbnail {
+			margin-bottom: 8%;
+		}
+
+		#example3 .sp-thumbail-container {
+			width: 142px;
+			height: 80px;
+		}
+
+		#example3 .sp-thumbnail{
+			width: 142px;
+			height: 300px;
+		}
+
+		.main-container { 
+
+			display: flex;
+  			flex-direction: column;
+  			justify-content: center;
+  			align-items: center;
+  			text-align: center;
+		}
+
+
+
+		@media (max-width: 768px) {
+			h1 { 
+				font-size: 25px;
+			}
+		}
+
+		@media (max-width: 400px) {
+
+			.sp-thumbnails {
+				display: none
+			}
+
+			h1 { 
+
+				font-size: 18px;
+			}
+
+		}
+
+	</style>
+
+</head>
+<body>
+
+
+<script src="./libs/jquery-1.11.0.min.js"></script>
+<script src="./dist/js/jquery.sliderPro.min.js"></script>
+
+<script type="text/javascript">
+	$( document ).ready(function( $ ) {
+		$( '#example3' ).sliderPro({
+			width: 900,
+			height: 500,
+			fade: true,
+			arrows: true,
+			buttons: false,
+			fullScreen: false,
+			shuffle: true,
+			smallSize: 500,
+			mediumSize: 1000,
+			largeSize: 3000,
+			thumbnailArrows: true,
+			autoplay: false
+		});
+	});
+</script>
+
+<br>
+<br>
+<br>
+<h1>Slider Pro</h1>
+
+<div class='main-container'>
+
+	<div class="video-box">
+		<img src="./images/Individual.Video.1.png">
+	</div>
+
+	<div class="description-box">
+		<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Non nobis, quod minima sit 
+			quis beatae a eligendi quo mollitia unde ullam tempore dolore fugit eos molestias voluptate sequi! Repellat, rem.</p>
+	</div>
+
+</div>
+
+<div id="example3" class="slider-pro">
+	<div class="sp-slides"/>
+		<div class="sp-slide"></div>
+		<div class="sp-slide"></div>
+		<div class="sp-slide"></div>
+		<div class="sp-slide"></div>
+		<div class="sp-slide"></div>
+		<div class="sp-slide"></div>
+		<div class="sp-slide"></div>
+		<div class="sp-slide"></div>
+		<div class="sp-slide"></div>
+		<div class="sp-slide"></div>
+		<div class="sp-slide"></div>
+		<div class="sp-slide"></div>
+		<div class="sp-slide"></div>
+		<div class="sp-slide"></div>
+		<div class="sp-slide"></div>
+	</div>
+
+	
+
+	<div class="sp-thumbnails">
+		<img class="sp-thumbnail" src="./images/related.content.1.png"/>
+		<img class="sp-thumbnail" src="./images/related.content.2.png"/>
+		<img class="sp-thumbnail" src="./images/Individual.Video.2.png"/>
+		<img class="sp-thumbnail" src="./images/related.content.3.png"/>
+		<img class="sp-thumbnail" src="./images/Individual.Video.3.png"/>
+		<img class="sp-thumbnail" src="./images/related.content.4.png"/>
+		<img class="sp-thumbnail" src="./images/Individual.Video.4.png"/>
+		<img class="sp-thumbnail" src="./images/related.content.3.png"/>
+		<img class="sp-thumbnail" src="./images/related.content.4.png"/>
+		<img class="sp-thumbnail" src="./images/Individual.Video.5.png"/>
+		<img class="sp-thumbnail" src="./images/related.content.5.png"/>
+		<img class="sp-thumbnail" src="./images/related.content.1.png"/>
+		<img class="sp-thumbnail" src="./images/related.content.2.png"/>
+		<img class="sp-thumbnail" src="./images/Individual.Video.3.png"/>
+		<img class="sp-thumbnail" src="./images/related.content.4.png"/>
+		<img class="sp-thumbnail" src="./images/Individual.Video.4.png"/>
+		<img class="sp-thumbnail" src="./images/related.content.3.png"/>
+		<img class="sp-thumbnail" src="./images/related.content.4.png"/>
+	</div>
+</div>
+
+
+
+</body>
+</html>

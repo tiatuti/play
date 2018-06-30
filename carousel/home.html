@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <title>Simple Image Gallery</title>
+    <link rel='stylesheet' href = 'styles.css'>
+    
+</head>
+<body>
+
+
+    <h1>Sample Image Gallery...</h1>
+
+
+
+    <script type='text/javascript' src='http://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js'></script>
+    <script> 
+        $(document).ready(function($){
+            $("ul li img").click(function(){
+            var CurrentImageURL = $(this).attr("src");
+            $(".container img").attr("src", CurrentImageURL);
+            
+            });
+        
+            $("ul li").click(function(){
+                $(this).addClass("active");
+                var that = this;
+                setTimeout(function(){
+                        $(that).removeClass('active');
+                }, 1500);
+            });
+        });
+      
+      </script>
+
+    
+
+  
+
+    <div class="wrapper">
+        <div class="container">
+            <img src="https://i.imgur.com/JmiG7dR.jpg" alt="">
+        </div>
+         <div class="img-container">
+            <ul>
+              <li><img src="https://i.imgur.com/hLBkTP0.jpg" alt=""></li>
+              <li><img src="https://i.imgur.com/CGXJNP8.jpg" alt=""></li>
+              <li><img src="https://i.imgur.com/7U34psd.jpg" alt=""></li>
+              <li><img src="https://i.imgur.com/5yHveMH.jpg" alt=""></li>
+            </ul>
+          </div>
+    </div>
+
+
+ 
+</body>
+</html>

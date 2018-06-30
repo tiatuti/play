@@ -1,0 +1,715 @@
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+  <style>
+ 
+ 
+/* sorting columns */ 
+
+#release-notes th, #release-notes td{
+    padding:.25em;
+}
+
+.sortable-hdr{
+    font-weight:bold;
+    cursor:pointer;
+    text-align:left; 
+}
+
+.non-sortable-hdr {
+    font-weight:bold;
+    text-align:left; 
+}
+
+ #release-notes td{
+    text-align:center; 
+    margin-top: 0%;
+} 
+
+/* #release-notes th.asc:after{
+    content:'Asc';
+    display:inline-block;
+    padding:0 .5em;
+    color:green;
+}
+#release-notes th.desc:after{
+    content:'Desc';
+    display:inline-block;
+    padding:0 .5em;
+    color:blue;
+} */
+
+#release-notes table {
+    border-collapse: collapse;
+    float:right;
+    width: 65%;
+}
+
+#release-notes tr {
+border-bottom: 1px solid #ccc;
+}
+
+tr:hover {background-color: #f5f5f5;}
+
+.desc {
+  text-align:left; 
+  margin-top: 2%; 
+  margin-bottom: 2% 
+}
+
+
+.details {
+  text-align:left; 
+}
+
+.tags {
+
+  text-align:left;
+
+}
+
+
+  
+  </style>
+
+  
+</head>
+<body>
+
+<div class="desc">This is some text.</div>
+
+<div style="background-color:lightblue">
+  <h3>This is a heading in a div element</h3>
+  <div class="desc">This is some text in a div element.</div>
+</div>
+
+<br>
+<br>
+<br>
+<br>
+
+<div id="release-notes">
+
+  <table>
+    <caption >Release Notes Information</caption>
+    <thead>
+        <tr class="hdr">
+            <th class="non-sortable-hdr" style="width:60%">Description</th> 
+            <th class="sortable-hdr asc" style="width:10%; text-align: center; vertical-align: text-top"><span>Date</span>
+              <span><i class="fas fa-long-arrow-alt-up"></i></span>
+            </th>
+            <th class="sortable-hdr" style="width:10%; text-align:center; vertical-align: text-top">Key</th>
+        </tr>
+    </thead>
+    <tbody>
+
+
+      <tr class="row">
+
+        <td><div class="desc">Enhancement: When time is imported manually or via a scheduled file import, Time Management now confirms the success or failure of the import. This option is delivered off and must be enabled (Company Setup &gt; System Setup &gt; Timesheet &gt; Import &gt; Enable Validation of Time Import Records). A new Time Import Errors notification detects time import errors. It confirms the number of records imported along with the number of failures, if applicable. The notification provides a list of the failed...</div>      
+        <div class="details">
+            <a  href="/release-information/release-notes-listing/ulti-281462">View Details</a>
+        </div>
+        <div class="tags"> <span class="tag">Time Management</span> <span class="tag">Time and Labor</span> <span class="tag">Portal</span> </div></td>
+        <td><div class="release-date">09/07/2018</div></td>
+        <td class="key"><p>ULTI-251462</p></td>
+ 
+      </tr>
+
+      <tr class="row">
+
+          <td><div class="desc">Informational: Effective July 1,  2017, the Public Transit Pass (TRPASS) deduction tax category is updated to no longer appear on Canadian Revenue Agency T4 Slips using Code 84.</div>
+            <div class="details">
+                <a  href="/release-information/release-notes-listing/ulti-281462">View Details</a>
+            </div>
+            <div class="tags"> <span class="tag">Tax Compliance</span> <span class="tag">Tax</span> <span class="tag">Portal</span> </div></td>
+          <td class="release-date"><div> 04/19/2018</div></td>
+          <td class="key">ULTI-289126</td>
+
+      </tr>
+
+      <tr class="row">
+      
+          <td><div class="desc">When time is imported manually or via a scheduled file import, Time Management now confirms the success or failure of the import. This option is delivered off and must be enabled (Company Setup &gt; System Setup &gt; Timesheet &gt; Import &gt; Enable Validation of Time Import Records). A new Time Import Errors notification detects time import errors. It confirms the number of records imported along with the number of failures, if applicable. The notification provides a list of the failed...</div>
+            <div class="details">
+                <a  href="/release-information/release-notes-listing/ulti-281462">View Details</a>
+            </div>
+          <div class="tags"> <span class="tag">Time Management</span> <span class="tag">Time and Labor</span> <span class="tag">Portal</span> </div></td>
+          <td class="release-date"><div> 06/07/2018</div> </td>
+          <td class="key">ULTI-281462</td>
+        </tr>
+
+        <tr class="row">
+          
+          <td><div class="desc">Before: When Time Management was accessed through the UltiPro mobile app via a mobile device, a message sometimes appeared stating that the system was unavailable. This error occurred randomly for different employees at different locations. Now: The message no longer appears, and employees can successfully access Time Management.</div>
+            <div class="details">
+                <a  href="/release-information/release-notes-listing/ulti-281462">View Details</a>
+            </div>
+          <div class="tags"> <span class="tag">Time Management</span> <span class="tag">Time and Labor</span> <span class="tag">Portal</span> </div></td>
+          <td class="release-date"><div> 06/07/2018</div> </td>
+          <td class="key">ULTI-275254</td>
+        </tr>
+
+        <tr class="row">
+         
+          <td><div class="desc">Informational: In order to ensure compliance with 2018 statutory form requirements, the following state tax form changes were made in Onboarding Classic: (1) Maryland Form MW507 and MW507M; (2) New York Wage Theft Form (multiple language updates); (3) Oklahoma W-4 (which replaces Federal Form W-4); and (4) Washington D.C. Form D-4 and D-4A.</div>
+            <div class="details">
+                <a  href="/release-information/release-notes-listing/ulti-281462">View Details</a>
+            </div>
+          <div class="tags"> <span class="tag">Onboarding - Classic</span> <span class="tag">Talent</span> <span class="tag">Portal</span> </div></td>
+          <td class="release-date"><div> 06/07/2018</div> </td>
+          <td class="key">ULTI-289825</td>
+        </tr>
+
+        <tr class="row">
+          
+          <td><div class="desc">Before: When employees accessed Time Management via the UltiPro mobile app and they tried to complete the Time Off Request page, an error message appeared if the Allow Usage Based On Increments Of field contained a decimal value (Rules Setup &gt; Accrual &gt; Computation). The error message appeared regardless if this option was on or off. Now: Decimal values are accepted.</div>
+            <div class="details">
+                <a  href="/release-information/release-notes-listing/ulti-281462">View Details</a>
+            </div>
+          <div class="tags"> <span class="tag">Time Management</span> <span class="tag">Time and Labor</span> <span class="tag">Mobile</span> </div></td>
+          <td class="release-date"><div> 06/07/2018</div> </td>
+          <td class="key">ULTI-289705</td>
+        </tr>
+
+        <tr class="row">
+         
+          <td><div class="desc">Before: Posting multiple payrolls concurrently in UltiPro resulted in deadlock errors. Now: Payroll is processed and posted successfully, as expected.</div>
+            <div class="details">
+                <a  href="/release-information/release-notes-listing/ulti-281462">View Details</a>
+            </div>
+          <div class="tags"> <span class="tag">Payroll</span> <span class="tag">Payroll</span> <span class="tag">Portal</span> </div></td>
+          <td class="release-date"><div> 06/07/2018</div> </td>
+          <td class="key">ULTI-280958</td>
+        </tr>
+
+        <tr  class="row" >
+          
+          <td><div class="desc">Before: When creating batches for multiple pay groups simultaneously for which pay groups had pending pay items that were earnings with offset deductions, duplicate offset deductions may have occurred. Now: Payroll is processed for multiple pay groups without duplicating earnings with offset deductions, as expected.</div>
+            <div class="details">
+                <a  href="/release-information/release-notes-listing/ulti-281462">View Details</a>
+            </div>
+          <div class="tags"> <span class="tag">Payroll</span> <span class="tag">Payroll</span> <span class="tag">Portal</span> </div></td>
+          <td class="release-date"><div> 06/07/2018</div> </td>
+          <td class="key">ULTI-262903</td>
+        </tr>
+
+        <tr  class="row">
+          
+          <td><div class="desc">Before: When attestation was enabled for an access group and a manager changed the timesheet status from Open to Approved, the attestation status changed from Not Yet Submitted to Disagreed. An envelope icon was attached to the record; when the icon was selected, an application error message appeared. Now: The attestation status only changes when the submitting employee agrees or disagrees.</div>
+            <div class="details">
+                <a  href="/release-information/release-notes-listing/ulti-281462">View Details</a>
+            </div>
+          <div class="tags"> <span class="tag">Time Management</span> <span class="tag">Time and Labor</span> <span class="tag">Portal</span> </div></td>
+          <td class="release-date"><div> 06/07/2018</div> </td>
+          <td class="key">ULTI-288111</td>
+        </tr>
+
+        <tr  class="row">
+          
+          <td><div class="desc">Enhancement: The Oregon Transit Tax (ORTRAN) local income tax code is available in UltiPro to support the new Oregon statewide transit tax that is effective July 1, 2018. The ORTRAN tax code has a rate of 0.1% of employee earned income, per statutory requirements. Employers with work locations within the state of Oregon are required to withhold the Oregon Transit Tax from earned income of employees who either reside in Oregon or have an Oregon work location. The ORTRAN tax code must be added...</div>
+            <div class="details">
+                <a  href="/release-information/release-notes-listing/ulti-281462">View Details</a>
+            </div>
+          <div class="tags"> <span class="tag">Payroll</span> <span class="tag">Tax</span> <span class="tag">Portal</span> </div></td>
+          <td class="release-date"><div> 06/07/2018</div> </td>
+          <td class="key">ULTI-287704</td>
+        </tr>
+        <tr  class="row">
+          
+          <td><div class="desc">Before: When employees accessed Time Management on a mobile device via a web browser and they tried to request time off (Your Time &gt; Request Time Off), an error message appeared if the Allow Usage Based On Increments Of field contained a decimal value (Rules Setup &gt; Accrual &gt; Computation). The employees could not select dates, and they were not allowed to complete the request. The error message appeared regardless if this option was on or off. Now: Decimal values are accepted.</div>
+            <div class="details">
+                <a  href="/release-information/release-notes-listing/ulti-281462">View Details</a>
+            </div>
+          <div class="tags"> <span class="tag">Time Management</span> <span class="tag">Time and Labor</span> <span class="tag">Portal</span> </div></td>
+          <td class="release-date"><div> 06/07/2018</div> </td>
+          <td class="key">ULTI-282879</td>
+        </tr>
+        <tr  class="row">
+          
+          <td><div class="desc">Enhancement: Mobile app users can now receive push notifications for Inbox items related to these business process: Change Name, Address, or Telephone; Add/Change Direct Deposit; Add/Change Contacts; Add/Change Alternate Phone Number.</div>
+            <div class="details">
+                <a  href="/release-information/release-notes-listing/ulti-281462">View Details</a>
+            </div>
+          <div class="tags"> <span class="tag">Mobile</span> <span class="tag">System Management</span> <span class="tag">Mobile</span> </div></td>
+          <td class="release-date"><div> 05/31/2018</div> </td>
+          <td class="key">ULTI-277151</td>
+        </tr>
+        <tr  class="row">
+          
+          <td><div class="desc">Before: When viewing the Pay Details page (Home &gt; Pay), a Pay Insight message indicator with no additional information appeared by the Next Regular Pay date. Now: The indicator was removed.</div>
+            <div class="details">
+                <a  href="/release-information/release-notes-listing/ulti-281462">View Details</a>
+            </div>
+          <div class="tags"> <span class="tag">Mobile</span> <span class="tag">Payroll</span> <span class="tag">Mobile</span> </div></td>
+          <td class="release-date"><div> 05/29/2018</div> </td>
+          <td class="key">ULTI-292565</td>
+        </tr>
+        <tr  class="row">
+          
+          <td><div class="desc">Enhancement: When you want to add a contact or update contact information  on your mobile device and select More from the profile, new menu options for Create New Contact and Add to Existing Contact appear.</div>
+            <div class="details">
+                <a  href="/release-information/release-notes-listing/ulti-281462">View Details</a>
+            </div>
+          <div class="tags"> <span class="tag">N/A</span> <span class="tag">System Management</span> <span class="tag">Mobile</span> </div></td>
+          <td class="release-date"><div> 05/29/2018</div> </td>
+          <td class="key">ULTI-288050</td>
+        </tr>
+        <tr  class="row">
+          
+          <td><div class="desc">Before: TimeBase clock device names longer than 30 characters caused the clock to crash, which resulted in constant reboot. Now: The first 30 characters of the name appear on the clock, and the clock does not crash.</div>
+            <div class="details">
+                <a  href="/release-information/release-notes-listing/ulti-281462">View Details</a>
+            </div>
+          <div class="tags"> <span class="tag">TouchBase</span> <span class="tag">Time and Labor</span> <span class="tag">Portal</span> </div></td>
+          <td class="release-date"><div> 05/22/2018</div> </td>
+          <td class="key">ULTI-291169</td>
+        </tr>
+        <tr  class="row">
+          
+          <td><div class="desc">Informational: When administrators select the M/&lt;- button to log in to the administrator mode on the TimeBase clock, the Admin Affirm message now reads, "Admin Login." Also, the two-digit number next to the message no longer appears.</div>
+            <div class="details">
+                <a  href="/release-information/release-notes-listing/ulti-281462">View Details</a>
+            </div>
+          <div class="tags"> <span class="tag">TouchBase</span> <span class="tag">Time and Labor</span> <span class="tag">Portal</span> </div></td>
+          <td class="release-date"><div> 05/22/2018</div> </td>
+          <td class="key">ULTI-281902</td>
+        </tr>
+        <tr class="row">
+         
+          <td><div class="desc">Enhancement: A relay schedule can now be copied to other clocks without having to manually set up the same schedule on each device. On the TouchBase Host, the Bell Relay Schedule tab contains a new Clone Bell Schedule button (Edit TouchBase &gt; Bell Relay Schedule tab). This button opens a dialog window that lists the TimeBase clock devices, and the schedule can be copied to the selected devices.</div>
+            <div class="details">
+                <a  href="/release-information/release-notes-listing/ulti-281462">View Details</a>
+            </div>
+          <div class="tags"> <span class="tag">TouchBase</span> <span class="tag">Time and Labor</span> <span class="tag">Portal</span> </div></td>
+          <td class="release-date"><div> 05/22/2018</div> </td>
+          <td class="key">ULTI-000892</td>
+        </tr>
+        <tr class="row">
+         
+          <td><div class="desc"> Enhancement: Authorized users of the TouchBase Host can now restore bio templates from soft-deleted records. The badge and employee name in the soft-deleted record must match an employee record in TouchBase, including a fingerprint. In the TouchBase Host, the List Employee Fingerprints page contains a new Restore Deleted Bio Data button (Employees &gt; List Employee Fingerprints), which is only available to those assigned to the Super Admin role. This option recovers enrolled employee bio...</div>
+              <div class="details">
+                  <a  href="/release-information/release-notes-listing/ulti-281462">View Details</a>
+              </div>
+          <div class="tags"> <span class="tag">TouchBase</span> <span class="tag">Time and Labor</span> <span class="tag">Portal</span> </div></td>
+          <td class="release-date"><div> 05/22/2018</div> </td>
+          <td class="key">ULTI-288918</td>
+        </tr>
+        <tr class="row">
+         
+          <td><div class="desc">Enhancement: The time zone now displays as part of the event time in three alerts: Disapproved Punch, Cancelled Punch, and Buddy Punch. In addition, punch-based alerts can be configured to display local clock time instead of server time via an optional parameter in the job alert configuration (List Alerts &gt; select an alert or select Create New Alert).</div>
+            <div class="details">
+                <a  href="/release-information/release-notes-listing/ulti-281462">View Details</a>
+            </div>>
+          <div class="tags"> <span class="tag">TouchBase</span> <span class="tag">Time and Labor</span> <span class="tag">Portal</span> </div></td>
+          <td class="release-date"><div> 05/22/2018</div> </td>
+          <td class="key">ULTI-282604</td>
+        </tr>
+        <tr class="row">
+          
+          <td><div class="desc">Enhancement: Perception administrators are now able to export survey response data for up to 5 current or past employees. To export data, select the Employee Export link in the Name Menu, enter the employee's name or email and select surveys to include.</div>
+            <div class="details">
+                <a  href="/release-information/release-notes-listing/ulti-281462">View Details</a>
+            </div>
+          <div class="tags"> <span class="tag">Perception</span> <span class="tag">Human Resources Administration</span> </div></td>
+          <td class="release-date"><div> 05/22/2018</div> </td>
+          <td>NU-13082</td>
+        </tr>
+        <tr class="row">
+          
+          <td><div class="desc">Before: When a rehired employee viewed the next pay date using the UltiPro mobile app, the date associated with the pay group from the employee's terminated record may have appeared. Now: The next pay date appears correctly, as expected.</div>
+            <div class="details">
+                <a  href="/release-information/release-notes-listing/ulti-281462">View Details</a>
+            </div>
+          <div class="tags"> <span class="tag">Mobile</span> <span class="tag">Payroll</span> <span class="tag">Mobile</span> </div></td>
+          <td class="release-date"><div> 05/17/2018</div> </td>
+          <td class="key">ULTI-292950</td>
+        </tr>
+        <tr class="row">
+          
+          <td><div class="desc">Enhancement: Form W-2c is available in the UltiPro mobile app by selecting Menu &gt; Tax Forms.</div>
+            <div class="details">
+                <a  href="/release-information/release-notes-listing/ulti-281462">View Details</a>
+            </div>
+          <div class="tags"> <span class="tag">Mobile</span> <span class="tag">Tax</span> <span class="tag">Mobile</span> </div></td>
+          <td class="release-date"><div> 05/17/2018</div> </td>
+          <td class="key">ULTI-280981</td>
+        </tr>
+        <tr class="row">
+          
+          <td><div class="desc">Informational: Effective January 1, 2018, the U.S. Federal Tax Levy (FDLEV) exemption tables are updated according to the revised 2018 statutory limits released May 1, 2018. Note: The federal earnings levy rates are outlined in IRS Publication 1494.</div>
+            <div class="details">
+                <a  href="/release-information/release-notes-listing/ulti-281462">View Details</a>
+            </div>
+          <div class="tags"> <span class="tag">Tax Compliance</span> <span class="tag">Tax</span> <span class="tag">Portal</span> </div></td>
+          <td class="release-date"><div> 05/17/2018</div> </td>
+          <td class="key">ULTI-293025</td>
+        </tr>
+        <tr class="row">
+          
+          <td><div class="desc">Informational: Effective January 1, 2018, the tax rate for the Olive Hill, Kentucky (KY255) tax code, located in Carter County, is updated from 0.5% to 1.5%, per statutory requirements.</div>
+            <div class="details">
+                <a  href="/release-information/release-notes-listing/ulti-281462">View Details</a>
+            </div>
+          <div class="tags"> <span class="tag">Tax Compliance</span> <span class="tag">Tax</span> <span class="tag">Portal</span> </div></td>
+          <td class="release-date"><div> 05/17/2018</div> </td>
+          <td class="key">ULTI-292659</td>
+        </tr>
+        <tr class="row">
+          
+          <td><div class="desc">Informational: Effective January 1, 2017, the following tax categories are updated for the state of Massachusetts from not taxable to taxable status: HCEUP - Housing-Condition for Employment (Update), MLSPY - Meal Allowance (Payment), and MLSUP - Meal Allowance (Update). Note: Employers with employees in Massachusetts should contact Customer Support to run the Tax Reconciliation Tool to make any necessary adjustments.</div>
+            <div class="details">
+                <a  href="/release-information/release-notes-listing/ulti-281462">View Details</a>
+            </div>
+          <div class="tags"> <span class="tag">Tax Compliance</span> <span class="tag">Tax</span> <span class="tag">Portal</span> </div></td>
+          <td class="release-date"><div> 05/17/2018</div> </td>
+          <td class="key">ULTI-292628</td>
+        </tr>
+        <try class="row">
+          
+          <td><div class="desc">Informational: Effective April 1, 2018, the tax rate for the Guthrie, Kentucky (KY247) tax code, located in Todd County, is updated from 1% to 2% per statutory requirements.</div>
+            <div class="details">
+                <a  href="/release-information/release-notes-listing/ulti-281462">View Details</a>
+            </div>
+          <div class="tags"> <span class="tag">Tax Compliance</span> <span class="tag">Tax</span> <span class="tag">Portal</span> </div></td>
+          <td class="release-date"><div> 05/17/2018</div> </td>
+          <td class="key">ULTI-292429</td>
+        </tr>
+        <tr class="row">
+          
+          <td><div class="desc">Informational: Effective January 1, 2018, the Idaho State Income Tax (IDSIT) withholding tables are updated according to the 2018 statutory limits. Idaho withholding allowances are based on the number of children who qualify for the Idaho Child Tax Credit. Note: The state of Idaho recommends all employees update their Form W-4 withholding elections. Retroactive adjustments are not required.</div>
+            <div class="details">
+                <a  href="/release-information/release-notes-listing/ulti-281462">View Details</a>
+            </div>
+          <div class="tags"> <span class="tag">Tax Compliance</span> <span class="tag">Tax</span> <span class="tag">Portal</span> </div></td>
+          <td class="release-date"><div> 05/17/2018</div> </td>
+          <td class="key">ULTI-292393</td>
+        </tr>
+        <tr class="row">
+         
+          <td><div class="desc">Informational: Effective January 1, 2018, the Health Savings Account (HSA) elective deduction limits for family coverage are updated according to the revised 2018 statutory requirements. The HSA Family 2018 (HSAF) elective limit is returned from $6,850 to $6,900 and the HSA Family with Catch-up 2018 (HSAFC) elective limit is returned from $7,850 to $7,900. Note: The individual HSA elective limit remains unchanged at $3,450.</div>
+            <div class="details">
+                <a  href="/release-information/release-notes-listing/ulti-281462">View Details</a>
+            </div>
+          <div class="tags"> <span class="tag">Tax Compliance</span> <span class="tag">Tax</span> <span class="tag">Portal</span> </div></td>
+          <td class="release-date"><div> 05/17/2018</div> </td>
+          <td class="key">ULTI-292347</td>
+        </tr>
+        <tr class="row">
+          
+          <td><div class="desc">Informational: Effective January 1, 2018, new local tax codes are added in Berrien County, Michigan. The Benton Harbor - Resident (MI052) tax code is added with a tax rate of 1%. The Benton Harbor - Non-Resident (MI053) tax code is added with a tax rate of 0.5%. Note: To correct overwithheld or underwithheld amounts, the following actions should be taken: 1) If the error is discovered in the same quarter in which it was made, the employer shall make the necessary adjustment on a subsequent...</div>
+              <div class="details">
+                  <a  href="/release-information/release-notes-listing/ulti-281462">View Details</a>
+              </div>
+          <div class="tags"> <span class="tag">Tax Compliance</span> <span class="tag">Tax</span> <span class="tag">Portal</span> </div></td>
+          <td class="release-date"><div> 05/17/2018</div> </td>
+          <td class="key">ULTI-291243</td>
+        </tr>
+        <tr class="row">
+         
+          <td><div class="desc">Informational: Effective January 1, 2018, the Utah State Income Tax (UTSIT) withholding tables are updated according to the 2018 statutory limits. Note: Retroactive adjustments are not required.</div>
+            <div class="details">
+                <a  href="/release-information/release-notes-listing/ulti-281462">View Details</a>
+            </div>
+          <div class="tags"> <span class="tag">Tax Compliance</span> <span class="tag">Tax</span> <span class="tag">Portal</span> </div></td>
+          <td class="release-date"><div> 05/17/2018</div> </td>
+          <td class="key">ULTI-290882</td>
+        </tr>
+        <tr class="row">
+          
+          <td><div class="desc">Informational: Effective January 1, 2018, the tax agent for the Penn Township, Pennsylvania (PA117545) tax code, located in York County, is updated to York County (YORKOP). Note: Tax filing for Q1 2018 can be completed using paper submissions; electronic filing is available beginning Q2 2018.</div>
+            <div class="details">
+                <a  href="/release-information/release-notes-listing/ulti-281462">View Details</a>
+            </div>
+          <div class="tags"> <span class="tag">Tax Compliance</span> <span class="tag">Tax</span> <span class="tag">Mobile</span> <span class="tag">Portal</span> </div></td>
+          <td class="release-date"><div> 05/17/2018</div> </td>
+          <td class="key">ULTI-290792</td>
+        </tr>
+        <tr class="row">
+         
+          <td><div class="desc">Informational: Effective January 1, 2018, a new local tax code for Columbiana, Ohio (OH2150), located in Mahoning County, is added with a tax rate of 1%.</div>
+            <div class="details">
+                <a  href="/release-information/release-notes-listing/ulti-281462">View Details</a>
+            </div>
+          <div class="tags"> <span class="tag">Tax Compliance</span> <span class="tag">Tax</span> <span class="tag">Portal</span> </div></td>
+          <td class="release-date"><div> 05/17/2018</div> </td>
+          <td class="key">ULTI-290782</td>
+        </tr>
+        <tr class="row">
+          
+          <td><div class="desc">Informational: Effective January 1, 2018, the S Corporation Fringe Benefits-Update (SCOUP) earnings tax category is updated and the Cleveland, Ohio (OH1007) and Strongsville, Ohio (OH1500) local tax codes are no longer taxable for this tax category.</div>
+            <div class="details">
+                <a  href="/release-information/release-notes-listing/ulti-281462">View Details</a>
+            </div>
+          <div class="tags"> <span class="tag">Tax Compliance</span> <span class="tag">Tax</span> <span class="tag">Portal</span> </div></td>
+          <td class="release-date"><div> 05/17/2018</div> </td>
+          <td class="key">ULTI-293227</td>
+        </tr >
+        <tr  class="row">
+          
+          <td><div class="desc">Enhancement: The updated 2018 Maryland Form MW507, Employee's Maryland Withholding Exemption Certificate, is now available in UltiPro.</div>
+            <div class="details">
+                <a  href="/release-information/release-notes-listing/ulti-281462">View Details</a>
+            </div>
+          <div class="tags"> <span class="tag">Tax Compliance</span> <span class="tag">Tax</span> <span class="tag">Portal</span> </div></td>
+          <td class="release-date"><div> 05/17/2018</div> </td>
+          <td class="key">ULTI-291955</td>
+        </tr >
+        <tr class="row">
+         
+          <td><div class="desc">Enhancement: The updated 2018 District of Columbia (D.C.) Form D-4, DC Withholding Allowance Certificate, is now available in UltiPro.</div>
+            <div class="details">
+                <a  href="/release-information/release-notes-listing/ulti-281462">View Details</a>
+            </div>
+          <div class="tags"> <span class="tag">Tax Compliance</span> <span class="tag">Tax</span> <span class="tag">Portal</span> </div></td>
+          <td class="release-date"><div> 05/17/2018</div> </td>
+          <td class="key">ULTI-291730</td>
+        </tr>
+        <tr class="row">
+         
+          <td><div class="desc">Informational: Effective January 1, 2018, the Canada Moving Expense - Cash (MVCPY) tax category is updated to include the option of bonus method taxation.</div>
+            <div class="details">
+                <a  href="/release-information/release-notes-listing/ulti-281462">View Details</a>
+            </div>
+          <div class="tags"> <span class="tag">Tax Compliance</span> <span class="tag">Tax</span> <span class="tag">Portal</span> </div></td>
+          <td class="release-date"><div> 05/17/2018</div> </td>
+          <td class="key">ULTI-291369</td>
+        </tr>
+        <tr class="row">
+          
+          <td><div class="desc">Informational: Effective January 1, 2018, the Canada RPP Pre-1990 Past Service  Code 74 (RPCUP) and RPP Pre-1990 Past Service  Code 75 (RPNUP) tax codes are updated and are no longer excluded on Canada Revenue Agency (CRA) T4 slips and are reported in Box 14.</div>
+            <div class="details">
+                <a  href="/release-information/release-notes-listing/ulti-281462">View Details</a>
+            </div>
+          <div class="tags"> <span class="tag">Tax Compliance</span> <span class="tag">Tax</span> <span class="tag">Portal</span> </div></td>
+          <td class="release-date"><div> 05/17/2018</div> </td>
+          <td class="key">ULTI-290974</td>
+        </tr>
+        <tr class="row">
+          
+          <td><div class="desc">Informational: Effective January 1, 2017, two new deduction tax categories are added per statutory requirements. The 2017 R401(k) Catchup Military Makeup (R4CU17) deduction is added with an elective contribution limit of $6,000 and a total contribution limit of $54,000. The 2017 R401(k) Military Makeup (R40117) deduction is added with an elective contribution limit of $18,000, a total contribution limit of $54,000, and a salary limit of $270,000.</div>
+            <div class="details">
+                <a  href="/release-information/release-notes-listing/ulti-281462">View Details</a>
+            </div>
+          <div class="tags"> <span class="tag">Tax Compliance</span> <span class="tag">Tax</span> <span class="tag">Portal</span> </div></td>
+          <td class="release-date"><div> 05/17/2018</div> </td>
+          <td class="key">ULTI-290398</td>
+        </tr>
+        <tr class="row">
+          
+          <td><div class="desc">Informational: Effective January 1, 2018, the Colorado State Income Tax (COSIT) withholding tables are updated according to the 2018 statutory limits. This includes new, reduced exemption amounts for claims of 7 to 10 exemptions. Note: Retroactive adjustments are not required.</div>
+            <div class="details">
+                <a  href="/release-information/release-notes-listing/ulti-281462">View Details</a>
+            </div>
+          <div class="tags"> <span class="tag">Tax Compliance</span> <span class="tag">Tax</span> <span class="tag">Portal</span> </div></td>
+          <td class="release-date"><div> 05/17/2018</div> </td>
+          <td class="key">ULTI-288854</td>
+        </tr>
+        <tr class="row">
+          
+          <td><div class="desc">Enhancement: The new 2018 Oklahoma Form OK-W-4, Employee’s Withholding Allowance Certificate, is now available in UltiPro.</div>
+            <div class="details">
+                <a  href="/release-information/release-notes-listing/ulti-281462">View Details</a>
+            </div>
+          <div class="tags"> <span class="tag">Tax Compliance</span> <span class="tag">Tax</span> </div></td>
+          <td class="release-date"><div> 05/17/2018</div> </td>
+          <td class="key">ULTI-288263</td>
+        </tr>
+        <tr class="row">
+          
+          <td><div class="desc">Before: When an employee's work location was changed from a location with State Disability Insurance (SDI) or State Income Tax (SIT) to a location without SDI or SIT, when a new paycheck was issued, the tax deductions from the prior location may have continued to be withheld. Now: When an employee's work location is changed, SDI and SIT tax deductions are updated correctly, as expected.</div>
+            <div class="details">
+                <a  href="/release-information/release-notes-listing/ulti-281462">View Details</a>
+            </div>
+          <div class="tags"> <span class="tag">Payroll</span> <span class="tag">Tax</span> <span class="tag">Portal</span> </div></td>
+          <td class="release-date"><div> 05/17/2018</div> </td>
+          <td class="key">ULTI-281403</td>
+        </tr>
+        <tr class="row">
+          
+          <td><div class="desc">Before: Employees with active (all non-terminated) employment statuses across multiple companies did not display under the My Team list for Managers using the UltiPro mobile app.  Now: Employees with active employment statuses display for one or more companies. The associated job title for the component company displays under employee's name. When the employee profile is viewed, the name of the component company displays on the profile.</div>
+            <div class="details">
+                <a  href="/release-information/release-notes-listing/ulti-281462">View Details</a>
+            </div>
+          <div class="tags"> <span class="tag">Mobile</span> <span class="tag">Human Resources Administration</span> <span class="tag">Mobile</span> </div></td>
+          <td class="release-date"><div> 05/08/2018</div> </td>
+          <td class="key">ULTI-269813</td>
+        </tr>
+        <tr class="row">
+          
+          <td><div class="desc">Enhancement: The UltiPro log in page has been updated to accommodate upcoming authentication protocols. At the Sign In page, users enter a username and select Next. The Sign In page then displays the Password field. Users then enter a password and select Sign In to authenticate.</div>
+            <div class="details">
+                <a  href="/release-information/release-notes-listing/ulti-281462">View Details</a>
+            </div>
+          <div class="tags"> <span class="tag">Security</span> <span class="tag">System Management</span> <span class="tag">Portal</span> </div></td>
+          <td class="release-date"><div> 05/04/2018</div> </td>
+          <td class="key">ULTI-284267</td>
+        </tr>
+        <tr class="row">
+          
+          <td><div class="desc">Enhancement: In the Approaching Total Hours notification (Company Setup &gt; Notification), "Days" was added to help identify days where the total hours for a single day are out of the normal range. The alert covers the prior day and reports any employees who have hours greater than what is defined in the alert settings.</div>
+            <div class="details">
+                <a  href="/release-information/release-notes-listing/ulti-281462">View Details</a>
+            </div>
+          <div class="tags"> <span class="tag">Time Management</span> <span class="tag">Time and Labor</span> <span class="tag">Portal</span> </div></td>
+          <td class="release-date"><div> 05/03/2018</div> </td>
+          <td class="key">ULTI-284648</td>
+        </tr>
+        <tr class="row">
+          
+          <td><div class="desc">New Feature: A new Consent feature in Recruitment provides administrative tools to help support the notice and consent requirements for the European Union (EU) General Data Protection Regulation (GDPR). Administrators can add and publish a GDPR consent message, create new versions of the message, and collect consent responses from employees. To configure, first enter and publish a consent message to appear on the candidate's job boards. Only one version of the consent message can be published...</div>
+              <div class="details">
+                  <a  href="/release-information/release-notes-listing/ulti-281462">View Details</a>
+              </div>
+            <div class="tags"> <span class="tag">Recruitment</span> <span class="tag">Talent</span> <span class="tag">Portal</span> </div></td>
+          <td class="release-date"><div> 05/03/2018</div> </td>
+          <td class="key">ULTI-290584</td>
+        </tr>
+        <tr class="row">
+          
+          <td><div class="desc">Before: The ability to Approve All on the Summary page (Attendance &gt; Summary) could not be limited to specific access groups. Now: When an access group has View rights to the Summary page, the Approve All button is no longer visible, but approvals can be made individually.</div>
+            <div class="details">
+                <a  href="/release-information/release-notes-listing/ulti-281462">View Details</a>
+            </div>
+            <div class="tags"> <span class="tag">Time Management</span> <span class="tag">Time and Labor</span> <span class="tag">Portal</span> </div></td>
+          <td class="release-date"><div> 05/03/2018</div> </td>
+          <td class="key">ULTI-284649</td>
+        </tr>
+        <tr class="row">
+          
+          <td><div class="desc">Before: When the accrual posting process was run for a date range that did not include the last posting date, the Available column showed a value of zero (Attendance &gt; Accruals &gt; select employee &gt; History). Now: The accruals are accurately posted even if an award date is not included in the posting process. This process enables the accrual to be run daily so that an accrual is not awarded before the date it is due.</div>
+            <div class="details">
+                <a  href="/release-information/release-notes-listing/ulti-281462">View Details</a>
+            </div>
+            <div class="tags"> <span class="tag">Time Management</span> <span class="tag">Time and Labor</span> <span class="tag">Portal</span> </div></td>
+          <td class="release-date"><div> 05/03/2018</div> </td>
+          <td class="key">ULTI-284636</td>
+        </tr>
+        <tr class="row">
+          
+          <td><div class="desc">Enhancement: The Failed Facial Recognition report can now include a photo along with the employee name, badge number, clock name, and date and time of the punch (TouchBase Host &gt; Transmissions &gt; List Failed Facial Recognition). A check box, Include Photo in Export File, was added to the dialog window for this report when Export Transmissions is selected. The default is unchecked, indicating a photo is not included in the Microsoft Excel file.</div>
+            <div class="details">
+                <a  href="/release-information/release-notes-listing/ulti-281462">View Details</a>
+            </div>
+            <div class="tags"> <span class="tag">TouchBase</span> <span class="tag">Time and Labor</span> <span class="tag">Portal</span> </div></td>
+          <td class="release-date"><div> 04/23/2018</div> </td>
+          <td class="key">ULTI-282100</td>
+        </tr>
+        <tr class="row">
+          
+          <td><div class="desc">Enhancement: To help supervisors quickly validate a suspected facial mismatch, the Buddy Punch alert email now includes a known, good photo next to the suspected mismatch photo. This enhancement eliminates the need to log into the TouchBase Host each time. In the email, the Face column was renamed Current Suspected Mismatched Photo. A Previously Validated Example Photo column was added.</div>
+            <div class="details">
+                <a  href="/release-information/release-notes-listing/ulti-281462">View Details</a>
+            </div>
+            <div class="tags"> <span class="tag">TouchBase</span> <span class="tag">Time and Labor</span> <span class="tag">Portal</span> </div></td>
+          <td class="release-date"><div> 04/23/2018</div> </td>
+          <td class="key">ULTI-281836</td>
+        </tr>
+        <tr class="row">
+          
+          <td><div class="desc">Enhancement: A new Generic Email alert is available from the TouchBase Host. The alert looks at customized questions at the clock (for example, "Were you injured at work today?"). This alert is similar to the Disapproved Punch alert, but it also contains an additional parameter titled "extraData qualifier." If any punch from any clock has a certain string in the Extra Data field, then the alert sends an email. The alert's name, header, and footer can be customized.</div>
+            <div class="details">
+                <a  href="/release-information/release-notes-listing/ulti-281462">View Details</a>
+            </div>
+            <div class="tags"> <span class="tag">TouchBase</span> <span class="tag">Time and Labor</span> <span class="tag">Portal</span> </div></td>
+          <td class="release-date"><div> 04/23/2018</div> </td>
+          <td class="key">ULTI-279571</td>
+        </tr>
+        <tr class="row">
+          
+          <td><div class="desc">Enhancement: The South Carolina State Unemployment Insurance (SUI) electronic file follows the electronic form W-2 (EFW2) format that is required by the State Unemployment Insurance Tax System (SUITS). Effective April 20, 2018, record RE (positions 8-16) contains the State ID instead of the Federal Employer Identification Number (FEIN). The deadline to submit your files using the new SUITS system is&nbsp;April 30, 2018. File your zero-wage reports directly in the SUITS portal.</div>
+            <div class="details">
+                <a  href="/release-information/release-notes-listing/ulti-281462">View Details</a>
+            </div>
+            <div class="tags"> <span class="tag">Tax Compliance</span> <span class="tag">Tax</span> <span class="tag">Portal</span> </div></td>
+          <td class="release-date"><div>04/19/2018</div> </td>
+          <td class="key">ULTI-276553</a></td>
+        </tr>
+
+        <td><p class="desc">Enhancement: The South Carolina State Unemployment Insurance (SUI) electronic file follows the electronic form W-2 (EFW2) format that is required by the State Unemployment Insurance Tax System (SUITS). Effective April 20, 2018, record RE (positions 8-16) contains the State ID instead of the Federal Employer Identification Number (FEIN). The deadline to submit your files using the new SUITS system is&nbsp;April 30, 2018. File your zero-wage reports directly in the SUITS portal.</p>
+          <div class="details">
+              <a  href="/release-information/release-notes-listing/ulti-281462">View Details</a>
+          </div>
+          <div class="tags"> <span class="tag">Tax Compliance</span> <span class="tag">Tax</span> <span class="tag">Portal</span> </div></td>
+        <td class="release-date"><p>04/19/2018</p> </td>
+        <td class="key">ULTI-276553</a></td>
+      </tr>
+    
+      
+    </tbody>
+  </table>
+</div>
+
+<br>
+<br>
+<br>
+<br>
+
+
+
+</body>
+
+<script type='text/javascript' src='http://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js'></script>
+<script type="text/javascript">
+$(document).ready(function(){ 
+						   
+  $(".sortable-hdr").click(function(){
+    var o = $(this).hasClass('asc') ? 'desc' : 'asc';
+    $('.sortable-hdr').removeClass('asc').removeClass('desc');
+    $(this).addClass(o);
+    
+    var colIndex = $(this).prevAll().length;
+    var tbod = $(this).closest("table").find("tbody");
+    var rows = tbod.find("tr");
+    
+    rows.sort(function(a,b){
+        var A = $(a).find("td").eq(colIndex).text();
+        var B = $(b).find("td").eq(colIndex).text();
+
+        if (!isNaN(A)) A = Number(A);
+        if (!isNaN(B)) B = Number(B);
+        
+        return o == 'asc' ? A > B : B > A;
+    });
+    
+    $.each(rows, function(index, ele){
+        tbod.append(ele);
+    });
+
+
+
+    	$('.arrow-up-down-box').find('a[href="#"]').on('click', function (e) { 
+
+          e.preventDefault();
+          this.expand = !this.expand;
+          $(this).text(this.expand?"Less...":"More...");
+
+          var thisarrow = $(this).closest('.arrow-up-down-box').find('.up-down-arrows').find(".arrow-up, .arrow-down").toggle();
+
+          var element = $(this).closest('.description-box').find('.columns'),
+          currentHeight = element.height(),
+          destinyHeight = element.css('height', 'auto').height();
+
+          if (element.hasClass('smalldesc')) {
+
+            element.removeClass('smalldesc');
+            element.height(currentHeight).animate({height: destinyHeight}, 1000);
+          }
+          else {
+
+
+            element.height(destinyHeight).animate({height: 43}, 1000).addClass('smalldesc');
+          };
+          });
+});
+
+});	
+
+</script>
+</html>

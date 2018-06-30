@@ -1,0 +1,595 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <title>Simple Image Gallery</title>
+ 	<meta charset="UTF-8">
+ 	<link rel='stylesheet' type="text/css" href ="./css/style.css">
+	<link rel="stylesheet" type="text/css" href="./slick/slick.css">
+    <link rel="stylesheet" type="text/css" href="./slick/slick-theme.css">
+    <style type="text/css">
+    html, body {
+      margin: 0;
+      padding: 0;
+    }
+
+    /* * {
+      box-sizing: border-box;
+    } */
+
+    .slider {
+        width: 50%;
+        margin: 100px auto;
+    }
+
+    .slick-slide {
+      margin: 0px 20px;
+    }
+
+    .slick-slide img {
+      width: 100%;
+    }
+
+    .slick-prev:before,
+    .slick-next:before {
+      color: black;
+    }
+
+
+    .slick-slide {
+      transition: all ease-in-out .3s;
+      opacity: .8;
+    }
+
+    .slick-active {
+      opacity: .8;
+    }
+
+    .slick-current {
+      opacity: 1;
+    }
+
+			/*Ultimate RELATED LEARNING*/
+
+	.ulti-rlt-learning-title {
+		text-align: center;
+	}
+	.ulti-rlt-learning-desc {
+		text-align:left;
+	}
+	.ulti-rlt-learning-banner-g {
+		background-color: rgb(69, 110, 2); 
+		display: inline-block;
+	}
+
+
+	.ulti-rlt-learning-icon-g {
+		width:30px;
+		height:30px;
+		margin-right: 5px;
+		float: right;
+
+	}
+
+	.ulti-rlt-learning-banner-o {
+		background-color: orange; 
+		height: 13px; 
+		width: 100%;
+	
+		
+	}
+
+
+	.ulti-rlt-learning-icon-o {
+		width:30px;
+		height:30px;
+		margin-right: 5px;
+		float: right;
+
+	}
+  </style>
+</head>
+<body>
+
+
+    <h1>Sample Image Gallery</h1>
+
+				
+				
+	<div class="slider slider-for">
+		<div>
+	      <img src="./images/Individual.Video.1.png">
+	    </div>
+	    <div>
+	      <img src="./images/Individual.Video.2.png">
+	    </div>
+	    <div>
+	      <img src="./images/Individual.Video.3.png">
+	    </div>
+	    <div>
+	      <img src="./images/Individual.Video.4.png">
+	    </div>
+	    <div>
+	      <img src="./images/Individual.Video.5.png">
+	    </div>
+	</div>
+
+
+	<div class="slider slider-nav">
+		<div>
+	      <img src="./images/Individual.Video.1.png">
+	    </div>
+	    <div>
+	      <img src="./images/Individual.Video.2.png">
+	    </div>
+	    <div>
+	      <img src="./images/Individual.Video.3.png">
+	    </div>
+	    <div>
+	      <img src="./images/Individual.Video.4.png">
+	    </div>
+	    <div>
+	      <img src="./images/Individual.Video.5.png">
+	    </div>
+	</div>
+
+	<section class="center slider">
+	    <div>
+	      <img src="./images/related.content.1.png">
+	    </div>
+	    <div>
+	      <img src="./images/related.content.2.png">
+	    </div>
+	    <div>
+	      <img src="./images/related.content.3.png">
+	    </div>
+	    <div>
+	      <img src="./images/related.content.4.png">
+	    </div>
+	    <div>
+	      <img src="./images/related.content.5.png">
+	    </div>
+  	</section>
+
+  	<script src="https://code.jquery.com/jquery-2.2.0.min.js" type="text/javascript"></script>
+  	<script src="./slick/slick.min.js" type="text/javascript" charset="utf-8"></script>
+
+    
+	<script type="text/javascript">
+	$(document).ready(function(){
+
+
+		 $('.slider-for').slick({
+			  slidesToShow: 1,
+			  slidesToScroll: 1,
+			  arrows: false,
+			  fade: true,
+			  asNavFor: '.slider-nav'
+		 });
+
+		$('.slider-nav').slick({
+			  slidesToShow: 4,
+			  slidesToScroll: 1,
+			  infinite: true,
+			  asNavFor: '.slider-for',
+			  dots: true,
+			  focusOnSelect: true
+		});
+
+		$(".center").slick({
+		    dots: true,
+		    infinite: true,
+		    focusOnSelect: true,
+		    slidesToShow: 4,
+		    slidesToScroll: 1
+		});
+
+	});
+	</script>
+</div>
+
+<br>
+<br>
+<hr>
+<h1>Sample List/Grid View</h1>
+
+<style type="text/css">
+
+		* {
+
+	font-family: 'Lato', sans-serif;
+	/* outline: 1px dotted red; */
+}
+
+#container .buttons { margin-bottom: 20px; }
+
+ /* border-bottom: 1px dotted #CCC;  */
+ /* border-right: 1px dotted #CCC; border-bottom: 1px dotted #CCC; */
+
+#container .list div.card { padding-top: 1%; width: 70%; height: 160px;margin-bottom: 10px; padding-bottom: 10px; padding-left: 25px; }
+#container .grid div.card { padding-top: 1%; float: left; width: 25%; height: 250px; } 
+
+
+
+.card-border {
+
+	width: 90%;
+	background-color: white;
+
+	opacity: 0.85;
+	filter: alpha(opacity=85);
+	border: solid 0.8px #aaa;   /*had to set border to less than 1px otherwise some cards will show a tiny gap */
+
+}
+.card-border:hover, .card-border:focus, .card-border:active {
+	opacity: 1;
+	filter: alpha(opacity=100);
+	cursor: pointer;
+}
+
+
+
+.card-top{width:auto; height:15px; display: block}
+.card-middle{background-color:#fff;width:auto;height:55%;margin-top:20px auto; display: block}
+.card-bottom{background-color:#fff;width:auto;height:35px;margin-top:20px auto; display: block}
+
+.card-inner-text {
+
+	margin-left: 5px;
+
+}
+
+</style>
+
+
+<div id="full-page">
+
+	<div id="container">
+			<div class="buttons">
+					<button class="grid">Grid View</button>
+					<button class="list">List View</button>
+			</div>
+			
+		
+			<div class="list">
+
+					<div class="card">	
+				  	<div class="card-border">
+
+								<div class="card-top ulti-rlt-learning-banner-g"></div>
+								<div class="card-inner-text card-middle">
+										<h4>This is a content generated title</h4>
+										<p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolorum consectetur atque deserunt voluptatem, 
+											dignissimos alias illum quo, nobis earum aliquid corporis facere molestias est, deleniti vel doloremque eaque hic. Accusamus. RIP.
+										</p>
+								</div>
+								<div class="card-bottom" style="vertical-align: bottom">
+											<span class="card-inner-text"  >2018-07-25</span>
+											<span><img class="ulti-rlt-learning-icon-g"  src="./images/quicktours_icon.png" alt="" ></span>				
+								</div>
+								
+						</div>
+					</div>
+
+					<div class="card">	
+							<div class="card-border">
+	
+									<div class="card-top ulti-rlt-learning-banner-o"></div>
+									<div class="card-inner-text card-middle">
+											<h4>This is a content generated title</h4>
+											<p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolorum consectetur atque deserunt voluptatem, 
+												dignissimos alias illum quo, nobis earum aliquid corporis facere molestias est, deleniti vel doloremque eaque hic. Accusamus. RIP.
+											</p>
+									</div>
+									<div class="card-bottom">
+												<span class="card-inner-text" >2018-07-25</span>
+												<span><img class="ulti-rlt-learning-icon-o"  src="./images/presentation_icon.png" alt="" ></span>				
+									</div>
+									
+						</div>
+					</div>
+
+					<div class="card">	
+							<div class="card-border">
+	
+									<div class="card-top ulti-rlt-learning-banner-g"></div>
+									<div class="card-inner-text card-middle">
+											<h4>This is a content generated title</h4>
+											<p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolorum consectetur atque deserunt voluptatem, 
+												dignissimos alias illum quo, nobis earum aliquid corporis facere molestias est, deleniti vel doloremque eaque hic. Accusamus. RIP.
+											</p>
+									</div>
+									<div class="card-bottom">
+												<span class="card-inner-text" >2018-07-25</span>
+												<span><img class="ulti-rlt-learning-icon-g"  src="./images/quicktours_icon.png" alt="" ></span>				
+									</div>
+									
+							</div>
+						</div>
+
+						<div class="card">	
+								<div class="card-border">
+		
+										<div class="card-top ulti-rlt-learning-banner-g"></div>
+										<div class="card-inner-text card-middle">
+												<h4>This is a content generated title</h4>
+												<p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolorum consectetur atque deserunt voluptatem, 
+													dignissimos alias illum quo, nobis earum aliquid corporis facere molestias est, deleniti vel doloremque eaque hic. Accusamus. RIP.
+												</p>
+										</div>
+										<div class="card-bottom">
+													<span class="card-inner-text" >2018-07-25</span>
+													<span><img class="ulti-rlt-learning-icon-g"  src="./images/quicktours_icon.png" alt="" ></span>				
+										</div>
+										
+								</div>
+							</div>
+
+							<div class="card">	
+									<div class="card-border">
+			
+											<div class="card-top ulti-rlt-learning-banner-o"></div>
+											<div class="card-inner-text card-middle">
+													<h4>This is a content generated title</h4>
+													<p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolorum consectetur atque deserunt voluptatem, 
+														dignissimos alias illum quo, nobis earum aliquid corporis facere molestias est, deleniti vel doloremque eaque hic. Accusamus. RIP.
+													</p>
+											</div>
+											<div class="card-bottom">
+														<span class="card-inner-text" >2018-07-25</span>
+														<span><img class="ulti-rlt-learning-icon-o"  src="./images/presentation_icon.png" alt="" ></span>				
+											</div>
+											
+								</div>
+							</div>
+
+							<div class="card">	
+									<div class="card-border">
+			
+											<div class="card-top ulti-rlt-learning-banner-o"></div>
+											<div class="card-inner-text card-middle">
+													<h4>This is a content generated title</h4>
+													<p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolorum consectetur atque deserunt voluptatem, 
+														dignissimos alias illum quo, nobis earum aliquid corporis facere molestias est, deleniti vel doloremque eaque hic. Accusamus. RIP.
+													</p>
+											</div>
+											<div class="card-bottom">
+														<span class="card-inner-text" >2018-07-25</span>
+														<span><img class="ulti-rlt-learning-icon-o"  src="./images/presentation_icon.png" alt="" ></span>				
+											</div>
+											
+								</div>
+							</div>
+
+							<div class="card">	
+									<div class="card-border">
+			
+											<div class="card-top ulti-rlt-learning-banner-o"></div>
+											<div class="card-inner-text card-middle">
+													<h4>This is a content generated title</h4>
+													<p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolorum consectetur atque deserunt voluptatem, 
+														dignissimos alias illum quo, nobis earum aliquid corporis facere molestias est, deleniti vel doloremque eaque hic. Accusamus. RIP.
+													</p>
+											</div>
+											<div class="card-bottom">
+														<span class="card-inner-text" >2018-07-25</span>
+														<span><img class="ulti-rlt-learning-icon-o"  src="./images/presentation_icon.png" alt="" ></span>				
+											</div>
+											
+								</div>
+							</div>
+
+							<div class="card">	
+									<div class="card-border">
+			
+											<div class="card-top ulti-rlt-learning-banner-g"></div>
+											<div class="card-inner-text card-middle">
+													<h4>This is a content generated title</h4>
+													<p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolorum consectetur atque deserunt voluptatem, 
+														dignissimos alias illum quo, nobis earum aliquid corporis facere molestias est, deleniti vel doloremque eaque hic. Accusamus. RIP.
+													</p>
+											</div>
+											<div class="card-bottom">
+														<span class="card-inner-text" >2018-07-25</span>
+														<span><img class="ulti-rlt-learning-icon-g"  src="./images/quicktours_icon.png" alt="" ></span>				
+											</div>
+											
+									</div>
+								</div>
+
+								<div class="card">	
+										<div class="card-border">
+				
+												<div class="card-top ulti-rlt-learning-banner-g"></div>
+												<div class="card-inner-text card-middle">
+														<h4>This is a content generated title</h4>
+														<p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolorum consectetur atque deserunt voluptatem, 
+															dignissimos alias illum quo, nobis earum aliquid corporis facere molestias est, deleniti vel doloremque eaque hic. Accusamus. RIP.
+														</p>
+												</div>
+												<div class="card-bottom">
+															<span class="card-inner-text" >2018-07-25</span>
+															<span><img class="ulti-rlt-learning-icon-g"  src="./images/quicktours_icon.png" alt=""  ></span>				
+												</div>
+												
+										</div>
+									</div>
+
+							<div class="card">	
+									<div class="card-border">
+			
+											<div class="card-top ulti-rlt-learning-banner-g"></div>
+											<div class="card-inner-text card-middle">
+													<h4>This is a content generated title</h4>
+													<p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolorum consectetur atque deserunt voluptatem, 
+														dignissimos alias illum quo, nobis earum aliquid corporis facere molestias est, deleniti vel doloremque eaque hic. Accusamus. RIP.
+													</p>
+											</div>
+											<div class="card-bottom">
+														<span class="card-inner-text" >2018-07-25</span>
+														<span><img class="ulti-rlt-learning-icon-g"  src="./images/quicktours_icon.png" alt="" ></span>				
+											</div>
+											
+									</div>
+								</div>
+
+
+								<div class="card">	
+										<div class="card-border">
+				
+												<div class="card-top ulti-rlt-learning-banner-g"></div>
+												<div class="card-inner-text card-middle">
+														<h4>This is a content generated title</h4>
+														<p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolorum consectetur atque deserunt voluptatem, 
+															dignissimos alias illum quo, nobis earum aliquid corporis facere molestias est, deleniti vel doloremque eaque hic. Accusamus. RIP.
+														</p>
+												</div>
+												<div class="card-bottom">
+															<span class="card-inner-text" >2018-07-25</span>
+															<span><img class="ulti-rlt-learning-icon-g"  src="./images/quicktours_icon.png" alt="" ></span>				
+												</div>
+												
+										</div>
+									</div>
+
+
+									<div class="card">	
+											<div class="card-border">
+					
+													<div class="card-top ulti-rlt-learning-banner-g"></div>
+													<div class="card-inner-text card-middle">
+															<h4>This is a content generated title</h4>
+															<p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolorum consectetur atque deserunt voluptatem, 
+																dignissimos alias illum quo, nobis earum aliquid corporis facere molestias est, deleniti vel doloremque eaque hic. Accusamus. RIP.
+															</p>
+													</div>
+													<div class="card-bottom">
+																<span class="card-inner-text" >2018-07-25</span>
+																<span><img class="ulti-rlt-learning-icon-g"  src="./images/quicktours_icon.png" alt="" ></span>				
+													</div>
+													
+											</div>
+										</div>
+
+										<div class="card">	
+												<div class="card-border">
+						
+														<div class="card-top ulti-rlt-learning-banner-g"></div>
+														<div class="card-inner-text card-middle">
+																<h4>This is a content generated title</h4>
+																<p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolorum consectetur atque deserunt voluptatem, 
+																	dignissimos alias illum quo, nobis earum aliquid corporis facere molestias est, deleniti vel doloremque eaque hic. Accusamus. RIP.
+																</p>
+														</div>
+														<div class="card-bottom">
+																	<span class="card-inner-text" >2018-07-25</span>
+																	<span><img class="ulti-rlt-learning-icon-g"  src="./images/quicktours_icon.png" alt="" ></span>				
+														</div>
+														
+												</div>
+											</div>
+
+											<div class="card">	
+													<div class="card-border">
+							
+															<div class="card-top ulti-rlt-learning-banner-g"></div>
+															<div class="card-inner-text card-middle">
+																	<h4>This is a content generated title</h4>
+																	<p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolorum consectetur atque deserunt voluptatem, 
+																		dignissimos alias illum quo, nobis earum aliquid corporis facere molestias est, deleniti vel doloremque eaque hic. Accusamus. RIP.
+																	</p>
+															</div>
+															<div class="card-bottom">
+																		<span class="card-inner-text" >2018-07-25</span>
+																		<span><img class="ulti-rlt-learning-icon-g"  src="./images/quicktours_icon.png" alt="" ></span>				
+															</div>
+															
+													</div>
+												</div>
+
+												<div class="card">	
+														<div class="card-border">
+								
+																<div class="card-top ulti-rlt-learning-banner-g"></div>
+																<div class="card-inner-text card-middle">
+																		<h4>This is a content generated title</h4>
+																		<p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolorum consectetur atque deserunt voluptatem, 
+																			dignissimos alias illum quo, nobis earum aliquid corporis facere molestias est, deleniti vel doloremque eaque hic. Accusamus. RIP.
+																		</p>
+																</div>
+																<div class="card-bottom">
+																			<span class="card-inner-text" >2018-07-25</span>
+																			<span><img class="ulti-rlt-learning-icon-g"  src="./images/quicktours_icon.png" alt="" ></span>				
+																</div>
+																
+														</div>
+													</div>
+
+													<div class="card">	
+															<div class="card-border">
+									
+																	<div class="card-top ulti-rlt-learning-banner-g"></div>
+																	<div class="card-inner-text card-middle">
+																			<h4>This is a content generated title</h4>
+																			<p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolorum consectetur atque deserunt voluptatem, 
+																				dignissimos alias illum quo, nobis earum aliquid corporis facere molestias est, deleniti vel doloremque eaque hic. Accusamus. RIP.
+																			</p>
+																	</div>
+																	<div class="card-bottom">
+																				<span class="card-inner-text" >2018-07-25</span>
+																				<span><img class="ulti-rlt-learning-icon-g"  src="./images/quicktours_icon.png" alt="" ></span>				
+																	</div>
+																	
+															</div>
+														</div>
+
+														<div class="card">	
+																<div class="card-border">
+										
+																		<div class="card-top ulti-rlt-learning-banner-g"></div>
+																		<div class="card-inner-text card-middle">
+																				<h4>This is a content generated title</h4>
+																				<p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolorum consectetur atque deserunt voluptatem, 
+																					dignissimos alias illum quo, nobis earum aliquid corporis facere molestias est, deleniti vel doloremque eaque hic. Accusamus. RIP.
+																				</p>
+																		</div>
+																		<div class="card-bottom">
+																					<span class="card-inner-text" >2018-07-25</span>
+																					<span><img class="ulti-rlt-learning-icon-g"  src="./images/quicktours_icon.png" alt="" ></span>				
+																		</div>
+																		
+																</div>
+															</div>
+
+
+
+			</div>
+	</div> 
+
+
+
+</div>
+
+
+<script type="text/javascript">
+
+$(document).ready(function(){
+
+	$("button").click(function(){
+        
+        if ($(this).hasClass('grid')) {
+        	$('#container div').removeClass('list').addClass('grid');
+	
+	    }
+	    else if($(this).hasClass('list')) {
+	        $('#container div').removeClass('grid').addClass('list');
+			
+	    }
+    });
+
+});
+
+</script>
+
+</body>
+</html>
