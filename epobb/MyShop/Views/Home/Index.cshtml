@@ -1,0 +1,46 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="row">
+    <div class="col-md-3">
+        <h2>Welcome</h2>
+        <p>
+            Using ASP.NET Core, we created a wonderful
+            application that allows buying your
+            favorite products
+        </p>
+    </div>
+    <div class="col-md-4">
+        <h2>Our products</h2>
+        <form asp-action="Index">
+            <input name="searchString" type="text" />
+            <input type="submit" value="Search" />
+        </form>
+
+        <table class="table table-striped">
+            @foreach (var product in Model)
+            {
+                <tr>
+                    <td>@product.Name</td>
+                    <td>@product.Description</td>
+                    <td>@product.Price</td>
+                    <td><a asp-action="Detail" asp-route-id="@product.ID">Details</a></td>
+                    <td><img src='@Url.Action("Image", new { id = product.ID })' height="30" /></td>
+                    <td><a asp-action="AddProduct" asp-controller="Basket" asp-route-id="@product.ID">Add to basket</a></td>
+                </tr>
+            }
+        </table>
+    </div>
+    <div class="col-md-3">
+        <h2>Startup</h2>
+        <p>
+            New to the store? Give yourself a treat
+            through the shop!
+        </p>
+        <p>
+            We can deliver the products to your door
+            by @DateTime.Now.AddDays(1).ToString("D") at 9 am.
+        </p>
+    </div>
+</div>

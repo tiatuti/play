@@ -1,0 +1,52 @@
+<html><head><meta charset="utf-8"/></head><body>
+  <button onclick='postWithoutAjax("http://www.w3.org//", {id:3, sample:"works"})'>Make post call</button>
+  
+  <script>
+  
+/**
+* Make a post petition without ajax and without refresh the page
+* Invisible for the user
+**/
+function postWithoutAjax( url, params ){
+    
+  params = params || {};
+
+  // function to remove the iframe
+  var removeIframe = function( iframe ){
+      iframe.parentElement.removeChild(iframe);
+  };
+  
+  // make a iframe...
+  var iframe = document.createElement('iframe');
+  iframe.style.display = 'none';
+  
+  iframe.onload = function(){
+      document = this.contentWindow.document;
+      
+      // Make a invisible form
+      var form = document.createElement('form');
+      form.method = 'get';
+      form.action = url;
+      document.body.appendChild(form);
+      
+      // pass the parameters
+      for( var name in params ){
+          var input = document.createElement('input');
+          input.type = 'hidden';
+          input.name = name;
+          input.value = params[name];
+          form.appendChild(input);
+      }
+      
+      form.submit();
+      // remove the iframe
+      removeIframe(iframe);
+  };
+  
+  document.body.appendChild(iframe);
+}
+  
+  </script>
+</body>
+
+</html>
