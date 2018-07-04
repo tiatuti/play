@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+            
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+	<script type="text/javascript" 
+            src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js">
+    </script>
+	<script type="text/javascript">
+        $(document).ready(function () {
+			
+            $('.btn').click(function() {
+  
+                $('.text').text('loading . . .');
+                
+                $.ajax({
+                  type:"GET",
+                  url:"https://api.meetup.com/2/cities",
+                  success: function(data) {
+                    $('.text').text(JSON.stringify(data));
+                  },
+                  dataType: 'jsonp',
+                });
+                
+              });
+
+        });
+    </script>
+</head>
+<body>
+	<button type="button" class="btn">Click me!</button>
+<p class="text">Replace me!!</p>
+<script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+</body>
+</html>
