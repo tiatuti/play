@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width">
+
+<title>Slider Pro</title>
+
+<link rel="stylesheet" type="text/css" href="../dist/css/slider-pro.min.css" media="screen"/>
+<link rel="stylesheet" type="text/css" href="../libs/fancybox/jquery.fancybox.css" media="screen"/>
+<link rel="stylesheet" type="text/css" href="css/examples.css" media="screen"/>
+<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,600' rel='stylesheet' type='text/css'>
+
+<script type="text/javascript" src="../libs/jquery-1.11.0.min.js"></script>
+<script type="text/javascript" src="../dist/js/jquery.sliderPro.min.js"></script>
+<script type="text/javascript" src="../libs/fancybox/jquery.fancybox.pack.js"></script>
+
+<style type="text/css">
+
+	* {
+
+			font-family: 'Open Sans', Arial;
+			/*outline: 1px dotted red;*/
+	}
+
+	.description-text {
+
+    	margin-left: 15%;
+    	margin-right: 15%;
+		text-align: left;
+	}
+
+	h2 {
+
+		padding-left: 90px; 
+	}
+
+	.main-container { 
+
+			display: flex;
+  			flex-direction: column;
+  			justify-content: center;
+  			align-items: center;
+  			text-align: center;
+
+	}
+
+	.hero-video {
+  			width: 50%;
+            height: auto;
+	}
+
+	.description-box {
+		align-items: center;
+	}
+
+	.smalldesc {
+    	height: 43px;
+    	overflow:hidden;
+		display: block;
+	}
+
+
+	/* UP/DOWN and MORE/LESS elements*/
+
+	.up-down-arrows {
+
+		width:74%; 
+		display:inline-block; 
+		font-size:16px; 
+		text-align: right;
+	}
+	.arrow-is-hidden{ display: none; }
+
+	.more-less-label a {
+
+		width:10%; 
+		display:inline-block; 
+		text-align:left; 
+		vertical-align:top; 
+		font-size:16px;
+		text-decoration:none; 
+	}
+
+	.more-less-label a:hover
+	{
+    	color: #0000FF
+	}
+
+	/* SLIDER PRO */
+
+	.sp-previous-arrow:before,
+	.sp-previous-arrow:after,
+	.sp-next-arrow:before,
+	.sp-next-arrow:after { 
+
+		background-color: #00162b;
+	}
+
+	.sp-arrow {
+    	width: 20px;
+    	height: 50px; 
+	}
+
+	.sp-slide {
+
+		opacity: 0.85;
+		filter: alpha(opacity=85);
+		/*border: solid 1px  rgb(240, 48, 48);*/
+		box-shadow: 2px 2px 4px #aaa;
+		
+	}
+	.sp-slide:hover, .sp-slide:focus, .sp-slide:active {
+		opacity: 1;
+		filter: alpha(opacity=100);
+	}
+
+	.slider-container {
+
+    	margin-left: 5%;
+    	margin-right: 5%;
+		margin-bottom: 5%;
+
+	}
+
+
+	/*Ultimate RELATED LEARNING*/
+
+	.ulti-rlt-learning-title {
+		text-align: center;
+	}
+	.ulti-rlt-learning-desc {
+		text-align:left;
+	}
+	.ulti-rlt-learning-banner-g {
+		background-color: rgb(69, 110, 2); 
+		height: 13px; 
+		width: 100%;
+	}
+
+
+	.ulti-rlt-learning-icon-g {
+		width:30px;
+		height:30px;
+
+	}
+
+	.ulti-rlt-learning-banner-o {
+		background-color: orange; 
+		height: 13px; 
+		width: 100%;
+	}
+
+
+	.ulti-rlt-learning-icon-o {
+		width:30px;
+		height:30px;
+
+	}
+
+</style>
+
+<script type="text/javascript">
+	$( document ).ready(function( $ ) {
+		$( '#related-content-slider' ).sliderPro({
+			width: '30%',
+			height: '185',
+			visibleSize: '100%',
+			autoSlideSize: true,
+			buttons: false,
+			arrows: true,
+			autoplay: false,
+			orientation: 'horizontal',
+			thumbnailPosition: 'right',
+			slideDistance: 7,
+			breakpoints: {
+				800: {
+					thumbnailsPosition: 'bottom',
+					thumbnailWidth: 270,
+					thumbnailHeight: 100
+				},
+				500: {
+					thumbnailsPosition: 'bottom',
+					thumbnailWidth: 100,
+					thumbnailHeight: 35
+				}
+			}
+		});
+ 
+	
+		$('.arrow-up-down-box').find('a[href="#"]').on('click', function (e) { 
+
+			e.preventDefault();
+			this.expand = !this.expand;
+			$(this).text(this.expand?"Less...":"More...");
+
+			var thisarrow = $(this).closest('.arrow-up-down-box').find('.up-down-arrows').find(".arrow-up, .arrow-down").toggle();
+
+			var element = $(this).closest('.description-box').find('.columns'),
+			currentHeight = element.height(),
+			destinyHeight = element.css('height', 'auto').height();
+
+			if (element.hasClass('smalldesc')) {
+
+				element.removeClass('smalldesc');
+				element.height(currentHeight).animate({height: destinyHeight}, 1000);
+			}
+			else {
+
+
+				element.height(destinyHeight).animate({height: 43}, 1000).addClass('smalldesc');
+			};
+		});
+	
+	});
+</script>
+
+</head>
+
+<body>
+
+	<div class="main-container">
+
+		<div class="video-box">
+			<img class="hero-video" src="./images/videofinalpage/Individual.Video.1.png" >
+		</div>
+
+		<div class="description-box">
+			<div class="columns smalldesc" >
+
+					<div class="description-text"><b>UPDATING DEDUCTIONS GOAL AMOUNTS: </b>Lorem ipsum dolor sit amet consectetur adipisicing elit. Non nobis, quod minima sit quis beatae 
+							a eligendi quo mollitia unde ullam tempore dolore fugit eos molestias voluptate sequi! Repellat, rem. Lorem 
+							Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard 
+							dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type 
+							specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining 
+							essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, 
+							and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.Lorem Ipsum is 
+							simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever 
+							since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. 
+							It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. 
+							It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, 
+							and more recently with desktop publishing software like Aldus PageMaker including versions of like Aldus PageMaker including versions of Lorem Ipsum.Lorem Ipsum is 
+							simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever 
+							since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. 
+							It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. 
+							It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, 
+							and more recently with desktop publishing software like Aldus PageMaker including versions 
+							of LLorem Ipsum RIP 
+					</div>
+					
+			</div>
+
+			
+			<div class="arrow-up-down-box"  >
+				<p>
+				
+						<span class="up-down-arrows">
+							<span class="arrow-up arrow-is-hidden">&#9650;</span>
+							<span class="arrow-down">&#9660;</span>
+						</span>
+						<span class="more-less-label">
+							<a href="#">More...</a>
+						</span>
+
+				</p>
+			</div>
+			
+		</div>
+	</div>
+
+	<br>
+	<h2>RELATED LEARNING</h2>
+	<br>
+	<br>
+	<br>
+
+
+
+<br>
+
+
+</body>
+</html>
