@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width">
+
+<title>OWL 0.0</title>
+
+
+<link rel="stylesheet" type="text/css" href="css/examples.css" media="screen"/>
+<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,600' rel='stylesheet' type='text/css'>
+
+<link rel="stylesheet" type="text/css" href="dist/assets/owl.carousel.min.css">
+<link rel="stylesheet" type="text/css" href="dist/assets/owl.theme.default.min.css">
+
+
+<style type="text/css">
+
+	* {
+
+			font-family: 'Open Sans', Arial;
+			/*outline: 1px dotted red;*/
+	}
+
+	.description-text {
+
+    	margin-left: 15%;
+    	margin-right: 15%;
+		text-align: left;
+	}
+
+	h2 {
+
+		padding-left: 90px; 
+	}
+
+	.main-container { 
+
+			display: flex;
+  			flex-direction: column;
+  			justify-content: center;
+  			align-items: center;
+  			text-align: center;
+
+	}
+
+	.hero-video {
+  			width: 50%;
+            height: auto;
+	}
+
+	.description-box {
+		align-items: center;
+	}
+
+	.smalldesc {
+    	height: 43px;
+    	overflow:hidden;
+		display: block;
+	}
+
+
+	/* UP/DOWN and MORE/LESS elements*/
+
+	.up-down-arrows {
+
+		width:74%; 
+		display:inline-block; 
+		font-size:16px; 
+		text-align: right;
+	}
+	.arrow-is-hidden{ display: none; }
+
+	.more-less-label a {
+
+		width:10%; 
+		display:inline-block; 
+		text-align:left; 
+		vertical-align:top; 
+		font-size:16px;
+		text-decoration:none; 
+	}
+
+	.more-less-label a:hover
+	{
+    	color: #0000FF
+	}
+
+	/* OWL override */
+
+	/* original CSS: .owl-carousel .owl-item img {
+		display: block;
+		width: 100%;
+	}*/
+
+	.owl-carousel .owl-item img {
+		display: inherit;
+		width: 35px;
+	}
+
+	/* CARD styles */
+
+	.card-border {
+
+		width: 90%;
+		background-color: white;
+	
+		opacity: 0.85;
+		filter: alpha(opacity=85);
+		border: solid 1.0px #aaa;   /*had to set border to less than 1px otherwise some cards will show a tiny gap */
+	
+	}
+	.card-border:hover, .card-border:focus, .card-border:active {
+		opacity: 1;
+		filter: alpha(opacity=100);
+		cursor: pointer;
+	}
+	
+	
+	
+	.card-top{width:auto; height:15px; display: block}
+	.card-middle{background-color:#fff;width:auto;height:55%;margin-top:20px auto; display: block}
+	.card-bottom{background-color:#fff;width:auto;height:35px;margin-top:20px auto; display: block}
+	
+	.card-inner-text {
+	
+		margin-left: 5px;
+	
+	}
+
+
+	/*Ultimate RELATED LEARNING*/
+
+	.ulti-rlt-learning-title {
+		text-align: center;
+	}
+	.ulti-rlt-learning-desc {
+		text-align:left;
+	}
+	.ulti-rlt-learning-banner-g {
+		background-color: rgb(69, 110, 2); 
+		height: 13px; 
+		width: 100%;
+	}
+
+
+	.ulti-rlt-learning-icon-g, .ulti-rlt-learning-icon-o {
+		width:35px;
+		height:35px;
+		float:right;
+		margin-right: 1px;
+	}
+
+	.ulti-rlt-learning-banner-o {
+		background-color: orange; 
+		height: 13px; 
+		width: 100%;
+	}
+
+</style>
+
+
+<script src="docs/assets/vendors/jquery.min.js"></script>
+<script src="dist/owl.carousel.min.js"></script>
+
+
+<script type="text/javascript">
+
+	$(document).ready(function(){
+		$('.owl-carousel').owlCarousel({
+			loop:true,
+			margin:10,
+			responsiveClass:false,
+			responsive:{
+				0:{
+					items:1,
+					nav:true
+				},
+				600:{
+					items:3,
+					nav:false
+				},
+				1000:{
+					items:5,
+					nav:true,
+					loop:false
+				}
+			}
+		})
+	  });
+
+		
+		$('.arrow-up-down-box').find('a[href="#"]').on('click', function (e) { 
+
+			e.preventDefault();
+			this.expand = !this.expand;
+			$(this).text(this.expand?"Less...":"More...");
+
+			var thisarrow = $(this).closest('.arrow-up-down-box').find('.up-down-arrows').find(".arrow-up, .arrow-down").toggle();
+
+			var element = $(this).closest('.description-box').find('.columns'),
+			currentHeight = element.height(),
+			destinyHeight = element.css('height', 'auto').height();
+
+			if (element.hasClass('smalldesc')) {
+
+				element.removeClass('smalldesc');
+				element.height(currentHeight).animate({height: destinyHeight}, 1000);
+			}
+			else {
+
+
+				element.height(destinyHeight).animate({height: 43}, 1000).addClass('smalldesc');
+			};
+		});
+</script>
+
+</head>
+
+<body>
+
+	<div class="main-container">
+
+		<div class="video-box">
+			<img class="hero-video" src="./images/videofinalpage/Individual.Video.1.png" >
+		</div>
+
+		<div class="description-box">
+			<div class="columns smalldesc" >
+
+					<div class="description-text"><b>UPDATING DEDUCTIONS GOAL AMOUNTS: </b>Lorem ipsum dolor sit amet consectetur adipisicing elit. Non nobis, quod minima sit quis beatae 
+							a eligendi quo mollitia unde ullam tempore dolore fugit eos molestias voluptate sequi! Repellat, rem. Lorem 
+							Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard 
+							dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type 
+							specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining 
+							essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, 
+							and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.Lorem Ipsum is 
+							simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever 
+							since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. 
+							It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. 
+							It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, 
+							and more recently with desktop publishing software like Aldus PageMaker including versions of like Aldus PageMaker including versions of Lorem Ipsum.Lorem Ipsum is 
+							simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever 
+							since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. 
+							It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. 
+							It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, 
+							and more recently with desktop publishing software like Aldus PageMaker including versions 
+							of LLorem Ipsum RIP 
+					</div>
+					
+			</div>
+
+			
+			<div class="arrow-up-down-box"  >
+				<p>
+				
+						<span class="up-down-arrows">
+							<span class="arrow-up arrow-is-hidden">&#9650;</span>
+							<span class="arrow-down">&#9660;</span>
+						</span>
+						<span class="more-less-label">
+							<a href="#">More...</a>
+						</span>
+
+				</p>
+			</div>
+			
+		</div>
+	</div>
+
+	<br>
+	<h2>RELATED LEARNING</h2>
+	<br>
+
+	<!-- Set up your HTML -->
+	<div class="owl-carousel owl-theme">
+			<div class="item">
+					<div class="card">	
+							<div class="card-border">
+	  
+									  <div class="card-top ulti-rlt-learning-banner-g"></div>
+									  <div class="card-inner-text card-middle">
+											  <h4>This is a content generated title</h4>
+											  <p style="margin-right: 2px"> Provides information about configuring Coeffiencent Overtime earnings according to FLSA standards.
+											  </p>
+									  </div>
+									  <div class="card-bottom" style="vertical-align: bottom">
+												  <span class="card-inner-text"  >2018-07-25</span>
+												  <span><img class="ulti-rlt-learning-icon-g"  src="./images/quicktours_icon.png" alt="" ></span>				
+									  </div>
+									  
+							  </div>
+						  </div>
+			</div>
+			<div class="item">
+					<div class="card">	
+							<div class="card-border">
+	
+									<div class="card-top ulti-rlt-learning-banner-o"></div>
+									<div class="card-inner-text card-middle">
+											<h4>This is a content generated title</h4>
+											<p>Step-by-step procedure that shows you how to view tabular data in a Cognos Analytics report.
+											</p>
+									</div>
+									<div class="card-bottom">
+												<span class="card-inner-text" >2018-07-25</span>
+												<span><img class="ulti-rlt-learning-icon-o"  src="./images/presentation_icon.png" alt="" ></span>				
+									</div>
+									
+						</div>
+					</div>
+			</div>
+			<div class="item">
+					<div class="card">	
+							<div class="card-border">
+	
+									<div class="card-top ulti-rlt-learning-banner-g"></div>
+									<div class="card-inner-text card-middle">
+											<h4>This is a content generated title</h4>
+											<p>Provides step-by-step instructions for adding external data to a delivered Business Intelligence package in order to expand reporting options.
+											</p>
+									</div>
+									<div class="card-bottom">
+												<span class="card-inner-text" >2018-07-25</span>
+												<span><img class="ulti-rlt-learning-icon-g"  src="./images/quicktours_icon.png" alt="" ></span>				
+									</div>
+									
+							</div>
+						</div>
+			</div>
+			<div class="item">
+					<div class="card">	
+							<div class="card-border">
+	
+									<div class="card-top ulti-rlt-learning-banner-g"></div>
+									<div class="card-inner-text card-middle">
+											<h4>This is a content generated title</h4>
+											<p>Provides step-by-step instructions for creating reports using multiple queries that include query items that have not been joined in the model. Creating a join relationship using common data items is required to avoid a cross join error. 
+												Note that this document is intended only for experienced Business Intelligence users who have a knowledge of data modeling.
+											</p>
+									</div>
+									<div class="card-bottom">
+												<span class="card-inner-text" >2018-07-25</span>
+												<span><img class="ulti-rlt-learning-icon-g"  src="./images/quicktours_icon.png" alt="" ></span>				
+									</div>
+									
+							</div>
+						</div>
+			</div>
+			<div class="item">
+
+					<div class="card">	
+							<div class="card-border">
+	
+									<div class="card-top ulti-rlt-learning-banner-o"></div>
+									<div class="card-inner-text card-middle">
+											<h4>This is a content generated title</h4>
+											<p>If you experience an error when using Cognos Analytics, follow these troubleshooting tips before submitting a case to Support.
+											</p>
+									</div>
+									<div class="card-bottom">
+												<span class="card-inner-text" >2018-07-25</span>
+												<span><img class="ulti-rlt-learning-icon-o"  src="./images/presentation_icon.png" alt="" ></span>				
+									</div>
+									
+						</div>
+					</div>
+
+			</div>
+			<div class="item">
+
+					<div class="card">	
+							<div class="card-border">
+	
+									<div class="card-top ulti-rlt-learning-banner-o"></div>
+									<div class="card-inner-text card-middle">
+											<h4>This is a content generated title</h4>
+											<p>Provides an overview of the Cognos Analytics Reporting user interface.
+											</p>
+									</div>
+									<div class="card-bottom">
+												<span class="card-inner-text" >2018-07-25</span>
+												<span><img class="ulti-rlt-learning-icon-o"  src="./images/presentation_icon.png" alt="" ></span>				
+									</div>
+									
+						</div>
+					</div>
+			
+			</div>
+			<div class="item">
+					<div class="card">	
+							<div class="card-border">
+	
+									<div class="card-top ulti-rlt-learning-banner-o"></div>
+									<div class="card-inner-text card-middle">
+											<h4>This is a content generated title</h4>
+											<p>Guide that provides an overview of Business Intelligence security, including how UltiPro qualifiers authorize users to access content.
+											</p>
+									</div>
+									<div class="card-bottom">
+												<span class="card-inner-text" >2018-07-25</span>
+												<span><img class="ulti-rlt-learning-icon-o"  src="./images/presentation_icon.png" alt="" ></span>				
+									</div>
+									
+						</div>
+					</div>
+			</div>
+			<div class="item">
+					<div class="card">	
+							<div class="card-border">
+	
+									<div class="card-top ulti-rlt-learning-banner-g"></div>
+									<div class="card-inner-text card-middle">
+											<h4>This is a content generated title</h4>
+											<p>Provides a list of roles delivered with Cognos Analytics, a description of role capabilities, and a listing of the icons each role is able to view after log in. 
+												In addition, step-by-step instructions demonstrate how a user is able to determine his or her own assigned roles in My Preferences.
+											</p>
+									</div>
+									<div class="card-bottom">
+												<span class="card-inner-text" >2018-07-25</span>
+												<span><img class="ulti-rlt-learning-icon-g"  src="./images/quicktours_icon.png" alt="" ></span>				
+									</div>
+									
+							</div>
+						</div>
+			</div>
+			<div class="item">
+					<div class="card">	
+							<div class="card-border">
+	
+									<div class="card-top ulti-rlt-learning-banner-g"></div>
+									<div class="card-inner-text card-middle">
+											<h4>This is a content generated title</h4>
+											<p>In this recording of a live event we will provide an Overview of the native Mobile App, while reviewing the Activation Process and providing a demo on how to activate it and enable it.  We also talk about all of the features as well as remind folks of the Mobile Pay Insights.  
+												Finally we talk about Future enhancements and remind folks of the Various Learning Resources that are available.
+											</p>
+									</div>
+									<div class="card-bottom">
+												<span class="card-inner-text" >2018-07-25</span>
+												<span><img class="ulti-rlt-learning-icon-g"  src="./images/quicktours_icon.png" alt=""  ></span>				
+									</div>
+									
+							</div>
+						</div>
+			</div>
+			<div class="item">
+					<div class="card">	
+							<div class="card-border">
+	
+									<div class="card-top ulti-rlt-learning-banner-g"></div>
+									<div class="card-inner-text card-middle">
+											<h4>This is a content generated title</h4>
+											<p>Provides a list of roles delivered with Cognos Analytics, a description of role capabilities, and a listing of the icons each role is able to view after log in. 
+												In addition, step-by-step instructions demonstrate how a user is able to determine his or her own assigned roles in My Preferences.
+											</p>
+									</div>
+									<div class="card-bottom">
+												<span class="card-inner-text" >2018-07-25</span>
+												<span><img class="ulti-rlt-learning-icon-g"  src="./images/quicktours_icon.png" alt="" ></span>				
+									</div>
+									
+							</div>
+						</div>
+			</div>
+			<div class="item">
+					<div class="card">	
+							<div class="card-border">
+	
+									<div class="card-top ulti-rlt-learning-banner-g"></div>
+									<div class="card-inner-text card-middle">
+											<h4>This is a content generated title</h4>
+											<p>Provides step-by-step instructions for configuring a Cognos Analytics report to burst. 
+												Bursting enables you to run a report once and then divide the results for recipients who each view a subset of the data.
+											</p>
+									</div>
+									<div class="card-bottom">
+												<span class="card-inner-text" >2018-07-25</span>
+												<span><img class="ulti-rlt-learning-icon-g"  src="./images/quicktours_icon.png" alt="" ></span>				
+									</div>
+									
+							</div>
+						</div>
+			</div>
+			<div class="item">
+					<div class="card">	
+							<div class="card-border">
+	
+									<div class="card-top ulti-rlt-learning-banner-g"></div>
+									<div class="card-inner-text card-middle">
+											<h4>This is a content generated title</h4>
+											<p>In this recording of this live event we review the quarterly update, with lead topics of Custom fillable forms enhancements, and Reserve employee number during Onboarding. Topics include are, Multiple E-Verify MOUs, More custom form and user defined field capabilities, Notification enhancements, 
+												iCIMS *and* 3rd party ATS integration options (UltiPro Developer Network), and What's Next - Assigning employee number, and disabling Onboarding's I-9 
+											</p>
+									</div>
+									<div class="card-bottom">
+												<span class="card-inner-text" >2018-07-25</span>
+												<span><img class="ulti-rlt-learning-icon-g"  src="./images/quicktours_icon.png" alt="" ></span>				
+									</div>
+									
+							</div>
+						</div>
+			</div>
+
+
+		</div>
+
+
+<br>
+
+
+</body>
+</html>
