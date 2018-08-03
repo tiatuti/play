@@ -86,6 +86,36 @@
     	color: #0000FF
 	}
 
+	/* CARD styles */
+
+	.card-border {
+
+		width: 90%;
+		background-color: white;
+	
+		opacity: 0.85;
+		filter: alpha(opacity=85);
+		border: solid 0.8px #aaa;   /*had to set border to less than 1px otherwise some cards will show a tiny gap */
+	
+	}
+	.card-border:hover, .card-border:focus, .card-border:active {
+		opacity: 1;
+		filter: alpha(opacity=100);
+		cursor: pointer;
+	}
+	
+	
+	
+	.card-top{width:auto; height:15px; display: block}
+	.card-middle{background-color:#fff;width:auto;height:55%;margin-top:20px auto; display: block}
+	.card-bottom{background-color:#fff;width:auto;height:35px;margin-top:20px auto; display: block}
+	
+	.card-inner-text {
+	
+		margin-left: 5px;
+	
+	}
+
 
 	/*Ultimate RELATED LEARNING*/
 
@@ -238,7 +268,24 @@
 
 	<!-- Set up your HTML -->
 	<div class="owl-carousel owl-theme">
-			<div class="item"><h4>1</h4></div>
+			<div class="item">
+					<div class="card">	
+							<div class="card-border">
+	  
+									  <div class="card-top ulti-rlt-learning-banner-g"></div>
+									  <div class="card-inner-text card-middle">
+											  <h4>This is a content generated title</h4>
+											  <p> Provides information about configuring Coeffiencent Overtime earnings according to FLSA standards.
+											  </p>
+									  </div>
+									  <div class="card-bottom" style="vertical-align: bottom">
+												  <span class="card-inner-text"  >2018-07-25</span>
+												  <span><img class="ulti-rlt-learning-icon-g"  src="./images/quicktours_icon.png" alt="" ></span>				
+									  </div>
+									  
+							  </div>
+						  </div>
+			</div>
 			<div class="item"><h4>2</h4></div>
 			<div class="item"><h4>3</h4></div>
 			<div class="item"><h4>4</h4></div>
