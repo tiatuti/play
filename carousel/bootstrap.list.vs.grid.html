@@ -105,7 +105,7 @@
 		<div class='informational-text'>
 		  <div>
 			
-			<span class='informational-innertext'>Released</span>
+			<span class='informational-inline-title'>Released</span>
 			
 		  </div>
 		</div>
@@ -119,7 +119,8 @@
 		<div class='informational-text'>
 		  <div>
 			
-			<span class='informational-innertext'>Views</span>
+			<span class='informational-inline-title'>Views</span>
+
 			
 		  </div>
 		</div>
@@ -850,7 +851,7 @@ $(document).ready(function(){
 	<style>
 		  
 		  .informational-box {
-			width: 150px;
+			width: 144px;
 			height: 50px;
 			background: transparent;
 			margin: 4px auto;
@@ -881,26 +882,28 @@ $(document).ready(function(){
 			right: 1px;
 			white-space: nowrap;
 			overflow: hidden;
-			letter-spacing: 0.1em; }
+			letter-spacing: 0.1em;
+			width: 142px }
 		  
 		  .informational-text > div {
 			width: 2000px;
-			margin-left: -840px; }
+			margin-left: -860px; }
 		  
-		  .informational-innertext::before,
-		  .informational-innertext::after {
+		  .informational-inline-title::before,
+		  .informational-inline-title::after {
 			content: '';
 			display: inline-block;
-			width: 400px;
 			height: 3px;
 			background: #123;
-			vertical-align: middle; }
+			vertical-align: middle;
+			overflow: hidden; }
 		  
-		  .informational-innertext::before {
-			margin-right: 10px; }
+		  .informational-inline-title::before {
+			margin-right: 2px;
+			width: 45px }
 		  
-		  .informational-innertext::after {
-			margin-left: 180px; }
+		  .informational-inline-title::after {
+			margin-left: 2px; width: 180px }
 		  
 
 
