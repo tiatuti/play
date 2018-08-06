@@ -1,0 +1,69 @@
+$pad: 1px;
+$space: 0px;
+$stroke: 1px;
+
+html {
+  background: #123;
+}
+
+.informational-box {
+  width: 150px;
+  height: 50px;
+  background: transparent;
+  margin: 2px auto;
+  padding: 8px;
+  position: relative;
+}
+
+p { 
+  color: white;
+  text-align: center;
+}
+
+.informational-box::after {
+  content: '';
+  display: block;
+  position: absolute;
+  top: $pad;
+  right: $pad;
+  left: $pad;
+  bottom: $pad - $space + 7px;
+  border: solid $stroke yellow;
+  border-bottom: 0;
+}
+
+.informational-text {
+  color: yellow; 
+  position: absolute;
+  text-align: center;
+  bottom: $pad - $space;
+  left: $pad;
+  right: $pad;
+  white-space: nowrap;
+  overflow: hidden;
+  letter-spacing: 0.1em;
+}
+
+.informational-text > div {
+  width: 2000px;
+  margin-left: -1 * (2000px - (400px)) / 2;
+
+}
+
+.informational-innertext::before,
+.informational-innertext::after {
+  content: '';
+  display: inline-block;
+  width: 400px;
+  height: $stroke;
+  background: yellow;
+  vertical-align: middle;
+}
+  
+.informational-innertext::before {
+  margin-right: 1px;
+}
+
+.informational-innertext::after {
+  margin-left: 180px;
+}

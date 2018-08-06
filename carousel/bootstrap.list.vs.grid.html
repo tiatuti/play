@@ -96,6 +96,37 @@
 </head>
 <body>
 
+	<h1>Sample box</h1>
+
+	
+
+	<div class='informational-box'>
+		<p>01/01/2018</p>
+		<div class='informational-text'>
+		  <div>
+			
+			<span class='informational-innertext'>Released</span>
+			
+		  </div>
+		</div>
+	  </div>
+
+	  <p></p>
+	  <p></p>
+
+	  <div class='informational-box'>
+		<p>2,547</p>
+		<div class='informational-text'>
+		  <div>
+			
+			<span class='informational-innertext'>Views</span>
+			
+		  </div>
+		</div>
+	  </div>
+
+	  <br>
+	  <br>
 
     <h1>Sample Image Gallery</h1>
 
@@ -814,6 +845,68 @@ $(document).ready(function(){
 	
 
 	</script>
+
+
+	<style>
+		  
+		  .informational-box {
+			width: 150px;
+			height: 50px;
+			background: transparent;
+			margin: 4px auto;
+			padding: 8px;
+			position: relative; }
+		  
+		  p {
+			color: #123;
+			text-align: center; }
+		  
+		  .informational-box::after {
+			content: '';
+			display: block;
+			position: absolute;
+			top: 1px;
+			right: 1px;
+			left: 1px;
+			bottom: 8px;
+			border: solid 3px #123;
+			border-bottom: 0; }
+		  
+		  .informational-text {
+			color: #123;
+			position: absolute;
+			text-align: center;
+			bottom: 1px;
+			left: 1px;
+			right: 1px;
+			white-space: nowrap;
+			overflow: hidden;
+			letter-spacing: 0.1em; }
+		  
+		  .informational-text > div {
+			width: 2000px;
+			margin-left: -840px; }
+		  
+		  .informational-innertext::before,
+		  .informational-innertext::after {
+			content: '';
+			display: inline-block;
+			width: 400px;
+			height: 3px;
+			background: #123;
+			vertical-align: middle; }
+		  
+		  .informational-innertext::before {
+			margin-right: 10px; }
+		  
+		  .informational-innertext::after {
+			margin-left: 180px; }
+		  
+
+
+	</style>
+
+
 
 </body>
 </html>

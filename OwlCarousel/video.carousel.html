@@ -98,6 +98,36 @@
 		width: 35px;
 	}
 
+	.owl-buttons {
+		display: none;
+	  }
+	  .owl-carousel:hover .owl-buttons {
+		display: block;
+	  }
+	  
+	  .owl-item {
+		text-align: center;
+	  }
+	  
+	  .owl-theme .owl-controls .owl-buttons div {
+		background: transparent;
+		color: #869791;
+		font-size: 40px;
+		line-height: 300px;
+		margin: 0;
+		padding: 0 60px;
+		position: absolute;
+		top: 0;
+	  }
+	  .owl-theme .owl-controls .owl-buttons .owl-prev {
+		left: 0;
+		padding-left: 20px;
+	  }
+	  .owl-theme .owl-controls .owl-buttons .owl-next {
+		right: 0;
+		padding-right: 20px;
+	  }
+
 	/* CARD styles */
 
 	.card-border {
@@ -167,6 +197,13 @@
 <script type="text/javascript">
 
 	$(document).ready(function(){
+
+		$("#owl-example").owlCarousel({
+			navigation : true,
+			nav: true,
+			navigationText : ['<span class="fa-stack"><i class="fa fa-circle fa-stack-1x"></i><i class="fa fa-chevron-circle-left fa-stack-1x fa-inverse"></i></span>','<span class="fa-stack"><i class="fa fa-circle fa-stack-1x"></i><i class="fa fa-chevron-circle-right fa-stack-1x fa-inverse"></i></span>'],
+		});
+
 		$('.owl-carousel').owlCarousel({
 			loop:true,
 			margin:10,
@@ -272,7 +309,18 @@
 	<h2>RELATED LEARNING</h2>
 	<br>
 
-	<!-- Set up your HTML -->
+			
+	<div id="owl-example" class="owl-carousel owl-theme">
+		<div class="item"><img src="https://placehold.it/300x300/936/c69/?text=1" alt=""></div>
+		<div class="item"><img src="https://placehold.it/300x300/693/9c6/?text=2" alt=""></div>
+		<div class="item"><img src="https://placehold.it/300x300/369/69c/?text=3" alt=""></div>
+		<div class="item"><img src="https://placehold.it/300x300/c33/f66/?text=4" alt=""></div>
+		<div class="item"><img src="https://placehold.it/300x300/099/3cc/?text=5" alt=""></div>
+		<div class="item"><img src="https://placehold.it/300x300/f93/fc6/?text=6" alt=""></div>
+	  </div>
+			  
+
+	<!-- Set up your HTML cards -->
 	<div class="owl-carousel owl-theme">
 			<div class="item">
 					<div class="card">	
