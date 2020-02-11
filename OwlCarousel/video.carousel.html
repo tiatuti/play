@@ -95,9 +95,23 @@
 	}*/
 
 	/*---------- OWL Carousel Customs ------------- */
+
+.owl-theme .owl-nav  [class*=owl-] {
+	border-radius: 100%;
+	padding: 0px;
+	width: 35px;
+	height: 35px;
+	line-height: 35px;
+	outline: none;
+}
+
+.owl-dot {
+	outline: none;
+  }
+
 .owl-carousel .owl-item img {
 	display: inherit;
-	width: 35px; }
+	width: 55px; }
   
   .owl-theme .owl-nav .owl-prev,
   .owl-theme .owl-nav .owl-next {
@@ -113,7 +127,8 @@
 	margin-top: -20px;
 	position: absolute;
 	top: 35%;
-	font-size: 45px; }
+	font-size: 45px;
+	 }
   
   .owl-prev {
 	left: 0; }
@@ -122,8 +137,37 @@
 	right: 0; }
 
 
+	
+	/* Styling Next and Prev buttons */
+	
+	.owl-theme .owl-controls .owl-buttons .owl-next div{
+			display: block; 
+			width: 50%; 
+			height: 100%; 
+			margin:0; 
+			position: absolute; 
+			top: 0; 
+			z-index: 10; 
+			overflow: hidden; 
+			opacity: 0; 
+			cursor: pointer; 
+			color: rgba(0,0,0,0.8); 
+			text-shadow: 1px 1px 0 aqua;	
+			-webkit-transition: all .3s ease; 
+			-moz-transition: all .3s ease; 
+			transition: all .3s ease; 
+			background-color:aqua;	
+	}
+
+
+	
+
+	
+	
+
 /*--- test */ 
 
+/*
 .owl-carousel:hover, .owl-carousel:focus, .owl-carousel:active {
 	opacity:0.85;
 	filter: alpha(opacity=85);
@@ -165,7 +209,7 @@
   .owl-theme .owl-controls .owl-prev div:hover {
 	color: #0000FF;
 	opacity: 1 !important;
-  }
+  } */
   
 
 	/* CARD styles */
@@ -244,7 +288,7 @@
 			margin:10,		  
 			navigation : true,
 			nav: true,
-			navText: ["<i class='fas fa-chevron-circle-left'></i>","<i class='fas fa-chevron-circle-right'></i>"],
+			navText: ["<i class='fas fa-chevron-circle-left fa-2x'></i>","<i class='fas fa-chevron-circle-right fa-2x'></i>"],
 
 
 		})
