@@ -4,6 +4,7 @@
 
     <title>Simple Image Gallery</title>
     <link rel='stylesheet' href = 'styles.css'>
+    <link rel='stylesheet' href = 'sandra.css'>
     
 </head>
 <body>
@@ -14,7 +15,8 @@
 
 
     <script type='text/javascript' src='http://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js'></script>
-    <script> 
+    <script type='text/javascript' src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+    <script>    
         $(document).ready(function($){
             $("ul li img").click(function(){
             var CurrentImageURL = $(this).attr("src");
@@ -29,8 +31,46 @@
                         $(that).removeClass('active');
                 }, 1500);
             });
-        });
-      
+
+            var link = $('.com__nav-link');
+            var linkParent = link.parent('li');
+            var section = $('.com__section');
+            var sectionContent = section.find('*');
+
+            var switchTab = function() {
+                var p = $(this).parent('li');
+                var i  = p.index();
+                var s = section.eq(i);
+                var c = s.find('*');
+                
+                section.removeClass('active');
+                sectionContent.removeAttr('style');
+                s.addClass('active');
+                
+                c.css({
+                    transform: 'none',
+                    opacity: 1
+                });
+                
+                linkParent.removeClass('active');
+                p.addClass('active');
+                
+                return false;
+            };
+
+            link.on('click', switchTab);
+
+            function activeFirst() {
+                section.first().addClass('active');
+                section.first().find('*').css({
+                    transform: 'none',
+                    opacity: 1
+                });
+                linkParent.first().addClass('active');
+            }
+
+            activeFirst();
+        });     
       </script>
 
     
@@ -50,6 +90,136 @@
             </ul>
           </div>
     </div>
+
+    <div class="com">
+	<div class="com__content">
+		<section class="com__section com__section--text">
+			<h1 class="animate slideInLeft ">Communication Design</h1>
+			<p class="animate slideInLeft delay-3">Communication design is a mixed discipline between design and information-development which is concerned with how media intermission such as printed, crafted, electronic media or presentations communicate with people.</p>
+		</section>
+		<section class="com__section com__section--text com__section--text-img">
+			<div class="com__section-half">
+				<h1 class="animate slideInLeft">Communication Design</h1>
+				<p class="animate slideInLeft delay-2">Communication design is a mixed discipline between design and information-development which is concerned with how media intermission such as printed, crafted, electronic media or presentations communicate with people.</p>
+			</div>
+			<div class="com__section-half">
+				<img class="animate slideInRight delay-3" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/45226/ettrics-logo.svg" alt="" />
+			</div>
+		</section>
+		<section class="com__section com__section--text centered">
+			<h1 class="animate scaleIn">Communication Design</h1>
+			<img class="animate scaleIn delay-3" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/45226/ettrics-logo.svg" alt="" />
+		</section>
+		<section class="com__section com__section--text">
+			<h1 class="animate slideInLeft ">Communication Design</h1>
+			<p class="animate slideInLeft delay-3">Communication design is a mixed discipline between design and information-development which is concerned with how media intermission such as printed, crafted, electronic media or presentations communicate with people.</p>
+		</section>
+		<section class="com__section com__section--text com__section--text-img">
+			<div class="com__section-half">
+				<h1 class="animate slideInLeft">Communication Design</h1>
+				<p class="animate slideInLeft delay-2">Communication design is a mixed discipline between design and information-development which is concerned with how media intermission such as printed, crafted, electronic media or presentations communicate with people.</p>
+			</div>
+			<div class="com__section-half">
+				<img class="animate slideInRight delay-3" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/45226/ettrics-logo.svg" alt="" />
+			</div>
+		</section>
+		<section class="com__section com__section--text centered">
+			<h1 class="animate scaleIn">Communication Design</h1>
+			<img class="animate scaleIn delay-3" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/45226/ettrics-logo.svg" alt="" />
+		</section>
+		<section class="com__section com__section--text">
+			<h1 class="animate slideInLeft ">Communication Design</h1>
+			<p class="animate slideInLeft delay-3">Communication design is a mixed discipline between design and information-development which is concerned with how media intermission such as printed, crafted, electronic media or presentations communicate with people.</p>
+		</section>
+        		<section class="com__section com__section--text">
+			<h1 class="animate slideInLeft ">Communication Design 2</h1>
+			<p class="animate slideInLeft delay-3">Communication design is a mixed discipline between design and information-development which is concerned with how media intermission such as printed, crafted, electronic media or presentations communicate with people.</p>
+		</section>
+        		<section class="com__section com__section--text">
+			<h1 class="animate slideInLeft ">Communication Design 3</h1>
+			<p class="animate slideInLeft delay-3">Communication design is a mixed discipline between design and information-development which is concerned with how media intermission such as printed, crafted, electronic media or presentations communicate with people.</p>
+		</section>
+	</div>
+	<nav class="com__nav">
+		<ul class="com__nav-list">
+			<li class="com__nav-item">
+				<a href="" class="com__nav-link">
+					<span class="blue-line animate scaleInLeft delay-2"></span>
+					<span class="white-line animate scaleInLeft delay-4"></span>
+					<span class="white-line animate scaleInLeft delay-5"></span>
+				</a>
+			</li>
+			<li class="com__nav-item">
+				<a href="" class="com__nav-link flex-row">
+					<div class="com__section-half">
+						<span class="blue-line animate scaleInLeft delay-3"></span>
+						<span class="white-line animate scaleInLeft delay-4"></span>
+					</div>
+					<div class="com__section-half">
+						<span class="white-circle animate slideInRight delay-5"></span>
+					</div>
+				</a>
+			</li>
+			<li class="com__nav-item">
+				<a href="" class="com__nav-link centered">
+					<span class="blue-line animate scaleIn delay-3"></span>
+					<span class="white-circle animate scaleIn delay-5"></span>
+				</a>
+			</li>
+			<li class="com__nav-item">
+				<a href="" class="com__nav-link">
+					<span class="blue-line animate scaleInLeft delay-2"></span>
+					<span class="white-line animate scaleInLeft delay-4"></span>
+					<span class="white-line animate scaleInLeft delay-5"></span>
+				</a>
+			</li>
+			<li class="com__nav-item">
+				<a href="" class="com__nav-link flex-row">
+					<div class="com__section-half">
+						<span class="blue-line animate scaleInLeft delay-3"></span>
+						<span class="white-line animate scaleInLeft delay-4"></span>
+					</div>
+					<div class="com__section-half">
+						<span class="white-circle animate slideInRight delay-5"></span>
+					</div>
+				</a>
+			</li>
+			<li class="com__nav-item">
+				<a href="" class="com__nav-link centered">
+					<span class="blue-line animate scaleIn delay-3"></span>
+					<span class="white-circle animate scaleIn delay-5"></span>
+				</a>
+			</li>
+			<li class="com__nav-item">
+				<a href="" class="com__nav-link">
+					<span class="blue-line animate scaleInLeft delay-2"></span>
+					<span class="white-line animate scaleInLeft delay-4"></span>
+					<span class="white-line animate scaleInLeft delay-5"></span>
+				</a>
+			</li>
+            <li class="com__nav-item">
+				<a href="" class="com__nav-link">
+					<span class="blue-line animate scaleInLeft delay-2"></span>
+					<span class="white-line animate scaleInLeft delay-4"></span>
+					<span class="white-line animate scaleInLeft delay-5"></span>
+				</a>
+			</li>
+            <li class="com__nav-item">
+				<a href="" class="com__nav-link">
+					<span class="blue-line animate scaleInLeft delay-2"></span>
+					<span class="white-line animate scaleInLeft delay-4"></span>
+					<span class="white-line animate scaleInLeft delay-5"></span>
+				</a>
+			</li>
+		</ul>
+	</nav>
+</div>
+
+<a href="http://ettrics.com/code/material-design-slider-animation/" class="logo" target="_blank">
+ <img class="logo" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/45226/ettrics-logo.svg" alt="" /> 
+</a>
+
+
 
 
  
